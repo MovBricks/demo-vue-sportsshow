@@ -1,0 +1,18 @@
+
+.img-list{
+  display: flex;
+  justify-content: center;
+}
+
+.img-box{
+  background: dodgerblue;
+  margin-left: 10px;
+}
+
+.page-link{
+  display: block;
+  margin: 0;
+  padding: 50px;
+  font-family:"Microsoft YaHei UI", "Microsoft YaHei UI Light", 微软雅黑;
+  color: #FFF;
+}

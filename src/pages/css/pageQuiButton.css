@@ -1,0 +1,17 @@
+.small{
+  margin: 5px;
+  height: 50px;
+}
+
+.ico{
+  height: 80px;
+}
+
+.with-icon span{
+  display: block;
+}
+
+#pageQuiButton{
+  display: flex;
+  justify-content: center;
+}
