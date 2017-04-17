@@ -6,7 +6,9 @@ a{
 }
 .main{
   width: 275px;
-  height: 280px;
+  height: 275px;
+}
+.content{
   border: solid #D01257 1px;
 }
 .tileInfo {
@@ -153,6 +155,12 @@ a{
 
 .showControlsDoorBar{
   opacity: 0;
-  height: 9.5px;
+  height: 5px;
 }
 
+.fade-enter-active{
+  transition: opacity .5s
+}
+.fade-enter{
+  opacity: 0
+}
