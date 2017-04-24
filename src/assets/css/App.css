@@ -9,3 +9,8 @@ h1{
 h1 a{
   color:dodgerblue;
 }
+.page-title{
+  position: relative;
+  z-index: 99999;
+  background-color: white;
+}

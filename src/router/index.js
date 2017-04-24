@@ -7,6 +7,8 @@ import pageQuiList from '../pages/pageQuiList.vue'
 import pageQuiNav from '../pages/pageQuiNav.vue'
 import pageEchartsTest from '../pages/pageEchartsTest.vue'
 import pageSports from '../pages/pageSports.vue'
+import pageheadTitle from '../pages/pageHeadTitle.vue'
+import pageSportsDetail from '../pages/pageSportsDetail.vue'
 
 Vue.use(Router)
 
@@ -41,6 +43,16 @@ export default new Router({
       path: '/sports',
       name: 'sports',
       component: pageSports
+    },
+    {
+      path: '/headtitle',
+      name: 'headTitle',
+      component: pageheadTitle
+    },
+    {
+      path: '/sportsdetail',
+      name: 'sportsdetail',
+      component: pageSportsDetail
     }
   ]
 })

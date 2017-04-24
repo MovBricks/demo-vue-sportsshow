@@ -26,6 +26,16 @@
           <a class="page-link" href="#/sports">sports</a>
         </p>
       </div>
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/headtitle">headtitle</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/sportsdetail">sportsdetail</a>
+        </p>
+      </div>
     </div>
   </div>
 </template>
