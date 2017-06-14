@@ -23,7 +23,7 @@
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="#/sports">sports</a>
+          <a class="page-link" href="#/sports">sports热量</a>
         </p>
       </div>
       <div class="img-box">
@@ -33,7 +33,17 @@
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="#/sportsdetail">sportsdetail</a>
+          <a class="page-link" href="#/sportsSteps">sportsSteps步数</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/sportsWeight">sportsWeight体重</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/pageDraggable">pageDraggable拖拽</a>
         </p>
       </div>
     </div>

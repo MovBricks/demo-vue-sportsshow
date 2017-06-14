@@ -1,12 +1,14 @@
 
 .img-list{
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
 }
 
 .img-box{
   background: dodgerblue;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .page-link{

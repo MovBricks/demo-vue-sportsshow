@@ -10,7 +10,7 @@
             </h2>
             <div class="goal" v-on:mouseenter="showPercent()" v-on:mouseleave="hidePercent()">
               <div class="meter" id="echarts-canvas"></div>
-              <div class="meter-center-icon"></div>
+              <div class="meter-center-icon" v-on:click="expandClick()"></div>
               <div class="meterText">
                 <div class="metricContainer absoluteContainer" v-show="!percentShow">
                   <span class="number">{{now}}</span>
@@ -34,14 +34,14 @@
                   </a>
                 </li>
                 <li class="control expandButton midSide">
-                  <a href="#" title="快速查看">
+                  <a v-on:click="expandClick()" title="快速查看">
                     <i class="img-expandButton"></i>
                     <span class="controlsLabel expand-tile">快速查看</span>
                   </a>
                 </li>
                 <li class="control moreButton rightSide">
-                  <a href="#/activities" title="查看更多">
-                    <span class="controlsLabel arrow-right">查看更多</span>
+                  <a v-on:click="axiosGetNowCalorie()" title="刷新数据">
+                    <span class="controlsLabel arrow-right">刷新数据</span>
                     <span class="img-arrowRightButton">❯</span>
                   </a>
                 </li>
@@ -66,21 +66,21 @@
               <div class="goalTitle">每日目标</div>
               <div class="setting">
                 <div class="metric">
-                  <input type="number" class="number" v-model.number.lazy="target">
+                  <input type="number" class="number" v-model.number.lazy="temporaryTarget">
                   <span class="unit">卡路里</span>
                 </div>
               </div>
               <div class="weeklyGoal">
                 <span>每周的目标</span>
                 <span class="weeklyGoalMetric">
-                  <span class="weeklyGoalNumber">35,000</span>
+                  <span class="weeklyGoalNumber">{{weekCalorieTarget}}</span>
                   <span class="weeklyGoalUnit">卡路里</span>
                 </span>
               </div>
             </div>
           </div>
           <div class="settingsFooter savable">
-            <el-button type="success" v-on:click="hideSettingShow()">完成</el-button>
+            <el-button type="success" v-on:click="doneButtonClick()">完成</el-button>
           </div>
         </div>
       </transition>
@@ -91,9 +91,10 @@
 
 <script>
   import echarts from 'echarts'
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
-    name: 'pageSports',
+    name: 'pageSportsPie',
     props: {
       initialTarget: {
         type: Number,
@@ -109,8 +110,7 @@
     },
     data: function () {
       return {
-        target: this.initialTarget,
-        now: this.initialNow,
+        temporaryTarget: this.initialTarget,
         settingShow: false,
         controlsShow: false,
         percentShow: false,
@@ -223,9 +223,20 @@
     computed: {
       getPercent: function () {
         return Number(100 * this.now / this.target).toFixed(2)
-      }
+      },
+      weekCalorieTarget: function () {
+        return this.target * 7
+      },
+      ...mapGetters({
+        now: 'getCalorieNow',
+        target: 'getCalorieTarget'
+      })
     },
     methods: {
+      ...mapActions([
+        'changeCalorieTarget',
+        'changeCalorieNow'
+      ]),
       drawPie (id) {
         this.chart = echarts.init(document.getElementById(id))
         this.chart.setOption(this.option)
@@ -261,8 +272,22 @@
       },
       hideSettingShow () {
         this.settingShow = false
+      },
+      expandClick () {
+        this.$emit('expandClick')
+      },
+      doneButtonClick () {
+        this.hideSettingShow()
+        this.changeCalorieTarget({targetCalorie: this.temporaryTarget})
+      },
+      axiosGetNowCalorie () {
+        this.axios.get('/nowcalorie').then(response => {
+          console.log('/nowcalorie response:' + JSON.stringify(response.data))
+          this.changeCalorieNow(response.data)
+        }).catch((err) => {
+          console.log('axiosGetNowCalorie err:' + err)
+        })
       }
-
     },
     watch: {
       // 如果发生改变，这个函数就会运行
@@ -275,6 +300,7 @@
     },
     mounted () {
       this.$nextTick(function () {
+        this.temporaryTarget = this.target
         this.drawPie('echarts-canvas')
       })
     }

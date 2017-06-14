@@ -3,18 +3,30 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+import axios from './axios.js'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
+
+import Mock from './mock'
+
+Mock()
 
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
+// 将axios挂载到prototype上，在组件中可以直接使用this.axios访问
+Vue.prototype.axios = axios
+
 /* eslint-disable no-new */
-new Vue({
+var vm = new Vue({
   el: '#app',
+  axios,
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
+window.vm = vm

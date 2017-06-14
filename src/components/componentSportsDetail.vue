@@ -1,7 +1,7 @@
 //运动每天详细数据展示页面
 <template>
-  <div class="backdrop" style="z-index: 1000;">
-    <div class="overlay" style=""></div>
+  <div class="backdrop">
+    <div class="overlay" v-on:click="overlayClick()"></div>
     <div class="dialog">
       <div class="largeTileContainer">
         <div class="largeTile calories-burned">
@@ -16,19 +16,19 @@
                   <div class="data">
                     <div class="total">
                       <span class="weeklyTotal">本周合计消耗</span>
-                      <span class="metric"><span class="number">756</span><span class="unit">卡路里</span></span>
+                      <span class="metric"><span class="number">{{weekCalorie}}</span><span class="unit">{{numberUnit}}</span></span>
                     </div>
                     <div class="avg">
                       <span class="dailyTotal">日均</span>
-                      <span class="metric"><span class="number">0</span><span class="unit">卡路里</span></span>
+                      <span class="metric"><span class="number">{{averageDailyCalorie}}</span><span class="unit">{{numberUnit}}</span></span>
                     </div>
                   </div>
                   <div class="progressStatus less">
-                    <div class="progressMsg">您尚未达标。</div>
-                    <div class="progressPerc">35,000的 3%</div>
+                    <div class="progressMsg">{{weekCalorieProgressPercTipStr}}</div>
+                    <div class="progressPerc">{{weekCalorieProgressPercStr}}</div>
                   </div>
                   <div class="meter">
-                    <div class="percentage less" style="min-width: 20px; width: 13%;">
+                    <div class="percentage less" v-bind:style="percentageLessStyleObject">
                       <div class="icon"></div>
                     </div>
                   </div>
@@ -38,7 +38,7 @@
                 <div class="js_graphHeader graphHeader">
                   <h3 class="graphTitle js_graphTitle">过去 2 周</h3>
                 </div>
-                <div class="chartContainer" id="echarts-canvas"></div>
+                <div class="chartContainer" id="sports-detail-echarts-canvas"></div>
               </div>
             </div>
           </div>
@@ -52,13 +52,13 @@
             </a>
           </li>
           <li class="control more leftSide midSide">
-            <a href="" title="查看更多">
-              <span class="controlsLabel arrow-right">查看更多</span>
+            <a v-on:click="axiosGetDetailCalorie()" title="刷新数据">
+              <span class="controlsLabel arrow-right">刷新数据</span>
               <span class="img-arrowRightButton">❯</span>
             </a>
           </li>
           <li class="control close rightSide">
-            <a title="close">
+            <a title="close" v-on:click="overlayClick()">
               <i class="img-closeWhiteButton"></i>
             </a>
           </li>
@@ -68,83 +68,28 @@
   </div>
 </template>
 
-
 <script>
   import echarts from 'echarts'
-  var timeCalorie = [
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 16,
-        wday: '日'
-      },
-      value: 5521
-    },
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 17,
-        wday: '一'
-      },
-      value: 1522
-    },
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 18,
-        wday: '二'
-      },
-      value: 1523
-    },
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 19,
-        wday: '三'
-      },
-      value: 1524
-    },
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 20,
-        wday: '四'
-      },
-      value: 1525
-    },
-    {
-      timeObj: {
-        year: 2017,
-        month: 4,
-        mday: 21,
-        wday: '五'
-      },
-      value: 1526
-    }
-  ]
+  import { mapGetters, mapActions } from 'vuex'
+
   export default {
-    name: 'pageSports',
+    name: 'pageSportsDetail',
     props: {
-      initialTarget: {
-        type: Number,
-        default: 2500
-      },
-      initialNow: {
-        type: Number,
-        default: 900
-      },
+//      initialTarget: {
+//        type: Number,
+//        default: 2500
+//      },
+//      initialNow: {
+//        type: Number,
+//        default: 900
+//      },
       numberUnit: {
         default: '卡路里'
       }
     },
     data: function () {
       return {
-        chart: null,
+        sportsDetailBarChart: null,
         option: {
           color: ['#5CC4C4'],
           tooltip: {
@@ -156,11 +101,6 @@
               type: 'shadow'
             },
             formatter: function (params, ticket, callback) {
-              var vaqqt = timeCalorie[params[0].dataIndex].timeObj.month + '月' + timeCalorie[params[0].dataIndex].timeObj.mday
-              var resStr = vaqqt + '日' + '<br/>' + params[0].value + '卡路里'
-//              var res = resStr + params[0].value + '卡路里'
-//              callback(ticket, resStr)
-              return resStr
             },
             padding: 15
           },
@@ -209,13 +149,7 @@
                 }
               },
               barWidth: '50%',
-              data: (function () {
-                var ret = []
-                for (let i = 0; i < timeCalorie.length; i++) {
-                  ret.push(timeCalorie[i].value)
-                }
-                return ret
-              })()
+              data: []
             }
           ]
 
@@ -223,47 +157,100 @@
       }
     },
     computed: {
-      getPercent: function () {
-        return Number(100 * this.now / this.target).toFixed(2)
+      ...mapGetters({
+        TimeCalorieArray: 'getTimeCalorie',
+        target: 'getCalorieTarget'
+      }),
+      timeCalorie: function () {
+        var ret = []
+        for (let i = 0; i < this.TimeCalorieArray.length; i++) {
+          if (i === 7) {
+            ret.push(null)
+          }
+          if (i > 13) {
+            break
+          }
+          ret.push(this.TimeCalorieArray[i].value)
+        }
+        return ret
+      },
+      weekCalorie: function () {
+        var weekCalorieCount = 0
+        for (let i = 7; i < this.TimeCalorieArray.length; i++) {
+          weekCalorieCount = weekCalorieCount + this.TimeCalorieArray[i].value
+        }
+        return weekCalorieCount
+      },
+      averageDailyCalorie: function () {
+        return parseInt(this.weekCalorie / 7)
+      },
+      weekCalorieTarget: function () {
+        return this.target * 7
+      },
+      weekCalorieProgressPerc: function () {
+        var percent = parseInt(this.weekCalorie * 100 / this.weekCalorieTarget)
+        percent = percent > 100 ? 100 : percent
+        return percent
+      },
+      weekCalorieProgressPercStr: function () {
+        return this.weekCalorieTarget + '的 ' + this.weekCalorieProgressPerc + '%'
+      },
+      weekCalorieProgressPercTipStr: function () {
+        if (this.weekCalorieProgressPerc >= 100) {
+          return '您已达标。'
+        } else {
+          return '您尚未达标。'
+        }
+      },
+      percentageLessStyleObject: function () {
+        return {
+          width: this.weekCalorieProgressPerc + '%'
+        }
       }
     },
     methods: {
+      ...mapActions([
+        'changeDetailCalorieTime'
+      ]),
       drawEcharts (id) {
-        this.chart = echarts.init(document.getElementById(id))
-        this.chart.setOption(this.option)
+        this.sportsDetailBarChart = echarts.init(document.getElementById(id))
+        this.sportsDetailBarChart.setOption(this.option)
       },
-      showPercent () {
-        this.percentShow = true
+      overlayClick () {
+        this.$emit('overlayClick')
       },
-      hidePercent () {
-        this.percentShow = false
+      getFormatter (params, ticket, callback) {
+        let index = params[0].dataIndex
+        if (index === 7) {
+          return null
+        } else if (index > 7) {
+          index--
+        }
+        let vaqqt = this.TimeCalorieArray[index].timeObj.month + '月' + this.TimeCalorieArray[index].timeObj.mday
+        var resStr = vaqqt + '日' + '<br/>' + params[0].value + '卡路里'
+        return resStr
       },
-      showControls () {
-        this.controlsShow = true
-      },
-      hideControls () {
-        this.controlsShow = false
-      },
-      showSettingShow () {
-        this.settingShow = true
-      },
-      hideSettingShow () {
-        this.settingShow = false
+      axiosGetDetailCalorie () {
+        this.axios.get('/detailcalorie').then(response => {
+          console.log('/detailcalorie response:' + JSON.stringify(response.data))
+          this.changeDetailCalorieTime(response.data)
+        }).catch((err) => {
+          console.log('axiosGetDetailCalorie err:' + err)
+        })
       }
-
     },
     watch: {
       // 如果发生改变，这个函数就会运行
-      target: function () {
-        this.changePie(this.target, this.now)
-      },
-      now: function () {
-        this.changePie(this.target, this.now)
+      timeCalorie: function () {
+        this.option.series[0].data = this.timeCalorie
+        this.drawEcharts('sports-detail-echarts-canvas')
       }
     },
     mounted () {
       this.$nextTick(function () {
-        this.drawEcharts('echarts-canvas')
+        this.option.series[0].data = this.timeCalorie
+        this.option.tooltip.formatter = this.getFormatter
+        this.drawEcharts('sports-detail-echarts-canvas')
       })
     }
   }
@@ -280,6 +267,15 @@
     list-style: none;
   }
 
+  .backdrop{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1000;
+  }
+
   .overlay {
     position: absolute;
     left: 0px;
@@ -292,6 +288,7 @@
   .backdrop{
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .calories-burned-icon {
@@ -383,6 +380,9 @@
     background-position: center;
     height: 18px;
     width: 18px;
+  }
+  .percentage less{
+    min-width: 20px;
   }
   .chart{
     padding-top: 30px;

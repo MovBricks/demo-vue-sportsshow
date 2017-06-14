@@ -8,7 +8,9 @@ import pageQuiNav from '../pages/pageQuiNav.vue'
 import pageEchartsTest from '../pages/pageEchartsTest.vue'
 import pageSports from '../pages/pageSports.vue'
 import pageheadTitle from '../pages/pageHeadTitle.vue'
-import pageSportsDetail from '../pages/pageSportsDetail.vue'
+import pageSportsSteps from '../pages/pageSportsSteps.vue'
+import sportsWeight from '../pages/pageSportsWeight.vue'
+import pageDraggable from '../pages/pageDraggable.vue'
 
 Vue.use(Router)
 
@@ -50,9 +52,19 @@ export default new Router({
       component: pageheadTitle
     },
     {
-      path: '/sportsdetail',
-      name: 'sportsdetail',
-      component: pageSportsDetail
+      path: '/sportsSteps',
+      name: 'sportsSteps',
+      component: pageSportsSteps
+    },
+    {
+      path: '/sportsWeight',
+      name: 'sportsWeight',
+      component: sportsWeight
+    },
+    {
+      path: '/pageDraggable',
+      name: 'pageDraggable',
+      component: pageDraggable
     }
   ]
 })
