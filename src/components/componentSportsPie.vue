@@ -2,7 +2,7 @@
 <template>
   <div class="sportsPieContainer">
     <div class="body">
-      <transition name="rotatey">
+      <transition name="rotatey" mode="out-in">
         <div class="main" v-show="!settingShow">
           <div class="content">
             <h2 class="tileTitle">
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="showControlsDoorBar" v-on:mouseenter="showControls()" v-show="!controlsShow"></div>
+          <div class="showControlsDoorBar" v-on:mouseenter="showControls()"></div>
           <div class="controls" v-on:mouseleave="hideControls()">
             <transition name="fade">
               <ul class="controlsList" v-show="controlsShow">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </transition>
-      <transition name="rotatey">
+      <transition name="rotatey" mode="out-in">
         <div class="settings" v-show="settingShow">
           <div class="settingsHeader" >
             <div class="settingsTitle">
@@ -66,7 +66,7 @@
               <div class="goalTitle">每日目标</div>
               <div class="setting">
                 <div class="metric">
-                  <input type="number" class="number" v-model.number.lazy="temporaryTarget">
+                  <input type="number" step="100" v-model.number.lazy="temporaryTarget">
                   <span class="unit">卡路里</span>
                 </div>
               </div>
@@ -262,7 +262,10 @@
         this.percentShow = false
       },
       showControls () {
-        this.controlsShow = true
+        if (!this.controlsShow) {
+          this.controlsShow = true
+        }
+//        this.controlsShow = true
       },
       hideControls () {
         this.controlsShow = false
@@ -326,9 +329,10 @@
     /*margin: 0 auto;*/
     position: absolute;
     left: calc(50% - 137.5px);
+
   }
   .content{
-    border: solid #D01257 1px;
+
   }
   .tileInfo {
     margin-left: 5px;
@@ -353,9 +357,9 @@
   }
   .body{
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 275px;
-    height: 325px;
+    height: 275px;
     /*display: flex;*/
     /*flex-direction:column;*/
     /*align-items:center;*/
@@ -365,6 +369,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing:border-box;
+    border: solid #D01257 1px;
   }
 
   .main .controls ul{
@@ -407,8 +413,12 @@
     margin-left: 5px;
   }
   .controls{
+    position: absolute;
+    z-index: 100;
+    top: 274px;
     display: flex;
     justify-content: center;
+    width: 275px;
   }
   .controls ul{
     margin: 0;
@@ -533,14 +543,16 @@
 
     outline:none;
     border: none;
-    width: 150px;
+    width: 180px;
+    height: 30px;
+    font-size: 1.5rem;
   }
   .metric .unit{
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .weeklyGoal{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.8rem;
     color: #585858;
   }
@@ -555,19 +567,21 @@
   }
 
   .rotatey-leave-active{
-    transform: translateX(275px);
-    transition: transform 1s;
+    /*transform: translateX(275px);*/
+    transform: rotateY(-90deg) scale(.9);
+    transition: transform 0.5s ;
   }
   .rotatey-leave{
-    transform: translateX(0);
+    /*transform: translateX(0);*/
   }
 
   .rotatey-enter-active{
-    transform: translateX(0);
-    transition: transform 1s 0.3s;
+    /*transform: translateX(0);*/
+    transition: transform 0.5s 0.4s;
   }
   .rotatey-enter{
-    transform: translateX(-275px);
+    /*transform: translateX(-275px);*/
+    transform: rotateY(90deg) scale(.9);
   }
 
   @import './css/normalize.css';

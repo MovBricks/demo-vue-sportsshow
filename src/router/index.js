@@ -11,11 +11,15 @@ import pageheadTitle from '../pages/pageHeadTitle.vue'
 import pageSportsSteps from '../pages/pageSportsSteps.vue'
 import sportsWeight from '../pages/pageSportsWeight.vue'
 import pageDraggable from '../pages/pageDraggable.vue'
+import pageMain from '../pages/pageMain.vue'
+import NotFoundComponent from '../components/Hello.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
+
     {
       path: '/',
       name: 'index',
@@ -65,6 +69,15 @@ export default new Router({
       path: '/pageDraggable',
       name: 'pageDraggable',
       component: pageDraggable
+    },
+    {
+      path: '/pageMain',
+      name: 'pageMain',
+      component: pageMain
+    },
+    {
+      path: '*',
+      component: NotFoundComponent
     }
   ]
 })

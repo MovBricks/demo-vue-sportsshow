@@ -2,7 +2,7 @@
 <template>
   <div class="sportsStepsContainer">
     <div class="chartContainer" id="calender-sports-steps-echarts-canvas"></div>
-    <el-button type="success" v-on:click="axiosGetCalenderSteps()">刷新</el-button>
+    <el-button type="success" v-on:click="axiosGetCalenderSteps()">获取模拟数据</el-button>
   </div>
 </template>
 
@@ -30,7 +30,7 @@
           backgroundColor: '#404a59',
           title: {
             top: 30,
-            text: '2016年某人每天的步数',
+            text: '2017年某人每天的步数',
             subtext: '数据纯属虚构',
             left: 'center',
             textStyle: {
@@ -42,7 +42,7 @@
           },
           legend: {
             top: '30',
-            left: '100',
+            left: '30',
             data: ['步数', 'Top 10'],
             textStyle: {
               color: '#fff'
@@ -50,7 +50,10 @@
           },
           calendar: [{
             top: 100,
-            left: 'center',
+            left: 40,
+//            right: 1,
+            height: 145,
+            cellSize: 19,
             range: this.showRange,
             splitLine: {
               show: true,
@@ -61,10 +64,11 @@
               }
             },
             yearLabel: {
-              formatter: '{start}  1st',
-              textStyle: {
-                color: '#fff'
-              }
+              show: false
+//              formatter: '{start}  1st',
+//              textStyle: {
+//                color: '#fff'
+//              }
             },
             itemStyle: {
               normal: {
@@ -138,7 +142,7 @@
         var data = []
 
         let date = +echarts.number.parseDate('2017-01-01')
-        let end = +echarts.number.parseDate('2017-06-30')
+        let end = +echarts.number.parseDate('2017-12-30')
         let dayTime = 3600 * 24 * 1000
 
         for (let time = date; time < end; time += dayTime) {
@@ -197,14 +201,14 @@
   }
 
   .sportsStepsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
   }
 
   .chartContainer{
-    width: 700px;
-    height: 300px;
+    width: 560px;
+    height: 275px;
   }
 
 

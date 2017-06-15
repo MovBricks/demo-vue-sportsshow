@@ -214,14 +214,14 @@
   .settings,
   .main {
     width: 275px;
-    height: 300px;
+    height: 275px;
     /*margin: 0 auto;*/
     position: absolute;
     left: calc(50% - 137.5px);
   }
 
   .content {
-    border: solid #D01257 1px;
+
   }
 
   .tileInfo {
@@ -247,7 +247,7 @@
     position: relative;
     overflow: hidden;
     width: 275px;
-    height: 325px;
+    height: 275px;
     /*display: flex;*/
     /*flex-direction:column;*/
     /*align-items:center;*/
@@ -255,9 +255,8 @@
   }
 
   .main {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    box-sizing: border-box;
+    border: solid #D01257 1px;
   }
 
   .main .controls ul {
@@ -274,13 +273,14 @@
 
   .stats{
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
+    margin: 0;
   }
 
   .weightGoal {
     position: relative;
     width: 275px;
-    height: 285px;
+    height: 275px;
   }
 
   .meter-center-icon {

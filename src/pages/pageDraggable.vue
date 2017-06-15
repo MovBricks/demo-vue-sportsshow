@@ -45,7 +45,8 @@
     computed: {
       dragOptions () {
         return {
-          animation: 0,
+          delay: 30,
+          animation: 500,
           filter: '.backdrop',
           ghostClass: 'ghost'
         }
@@ -56,7 +57,7 @@
 
 <style scoped>
   .flip-list-move {
-    transition: transform 1s;
+    /*transition: transform 1s;*/
   }
   .ghost {
     opacity: 0.3;
@@ -65,15 +66,17 @@
   .list-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
   }
   .list-group>*{
-    transition: all 1s ease;
+    /*transition: all 1s ease;*/
+    padding-left: 10px;
+    padding-bottom: 30px;
   }
   #pageDraggable{
-    -webkit-user-select: none;  /* Chrome all / Safari all /opera15+*/
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;
+    /*-webkit-user-select: none;  !* Chrome all / Safari all /opera15+*!*/
+    /*-moz-user-select: none;     !* Firefox all *!*/
+    /*-ms-user-select: none;      !* IE 10+ *!*/
+    /*user-select: none;*/
   }
 </style>

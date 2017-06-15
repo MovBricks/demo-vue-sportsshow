@@ -1,9 +1,18 @@
 <template>
-  <div class="comp-head-title-nav">
-    <slot name="comp-head-title-nav-icon"></slot>
-    <a v-for="(item, index) in items" :class="[commonClass,item.active ? 'active' : 'inactive']" v-on:click="navClickEvent(items,index)" >
-      <span class="nav-txt">{{item.text}}</span>
-    </a>
+  <div class="compHeaderTitleNav">
+    <div>
+      <el-button size="large" class="headerButton">
+        <img class="litImage" src="../assets/imgLit/lit-person.png" alt="个人">个人</el-button>
+      <el-button size="large" class="headerButton">
+        <img class="litImage" src="../assets/imgLit/lit-home.png" alt="主页">主页</el-button>
+      <el-button size="large" class="headerButton">
+        <img class="litImage" src="../assets/imgLit/lit-friends.png" alt="朋友">朋友</el-button>
+    </div>
+    <div>
+      <el-button icon="setting" size="large" class="headerButton"></el-button>
+      <el-button icon="message" size="large" class="headerButton"></el-button>
+      <slot name="comp-head-title-nav-icon"></slot>
+    </div>
   </div>
 </template>
 
@@ -11,25 +20,6 @@
   export default {
     data: function () {
       return {
-        commonClass: 'comp-head-title-nav-item',
-        items: [
-          {
-            text: '数字面板',
-            active: true
-          },
-          {
-            text: '记录',
-            active: false
-          },
-          {
-            text: '社区',
-            active: false
-          },
-          {
-            text: '进阶版',
-            active: false
-          }
-        ]
       }
     },
     methods: {
@@ -47,32 +37,20 @@
 </script>
 <style scoped>
 
-  .comp-head-title-nav{
+  .compHeaderTitleNav,
+  .compHeaderTitleNav>div{
     display: flex;
-    justify-content: center;
-
-    border-bottom: solid 10px darkred;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .comp-head-title-nav-item{
-    width: 100px;
-    text-align: center;
-    margin-left: 5px;
-    height: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items:center;
+  .headerButton{
+    border-width: 0;
   }
 
-  .inactive:hover{
-    background: dodgerblue;
+  .litImage{
+    width: 16px;
+    height: 16px;
   }
-
-  .active{
-    border-bottom:  5px solid goldenrod;
-    color: goldenrod;
-  }
-
 </style>
 
