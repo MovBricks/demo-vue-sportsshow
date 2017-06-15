@@ -17,11 +17,11 @@ import NotFoundComponent from '../components/Hello.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
 
     {
-      path: '/index',
+      path: '/',
       name: 'index',
       component: index
     },

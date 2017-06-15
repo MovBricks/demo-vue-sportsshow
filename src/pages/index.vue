@@ -3,52 +3,52 @@
     <div class="img-list type-full">
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/btn">按钮</a>
+          <a class="page-link" href="#/btn">按钮</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/list">列表</a>
+          <a class="page-link" href="#/list">列表</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/nav">导航</a>
+          <a class="page-link" href="#/nav">导航</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/show">echarts测试</a>
+          <a class="page-link" href="#/show">echarts测试</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/sports">sports热量</a>
+          <a class="page-link" href="#/sports">sports热量</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/headtitle">headtitle</a>
+          <a class="page-link" href="#/headtitle">headtitle</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/sportsSteps">sportsSteps步数</a>
+          <a class="page-link" href="#/sportsSteps">sportsSteps步数</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/sportsWeight">sportsWeight体重</a>
+          <a class="page-link" href="#/sportsWeight">sportsWeight体重</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/pageDraggable">pageDraggable拖拽</a>
+          <a class="page-link" href="#/pageDraggable">pageDraggable拖拽</a>
         </p>
       </div>
       <div class="img-box">
         <p class="img-item">
-          <a class="page-link" href="/pageMain">pageMain主页</a>
+          <a class="page-link" href="#/pageMain">pageMain主页</a>
         </p>
       </div>
 
