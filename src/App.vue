@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1 class="page-title"><a href="/">开发组件库</a></h1>
+    <h1 class="page-title"><a href="/index">开发组件库</a></h1>
     <router-view></router-view>
   </div>
 </template>
