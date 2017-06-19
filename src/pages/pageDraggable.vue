@@ -1,5 +1,5 @@
 <template>
-  <div id="pageDraggable" class="pageDraggableMain">
+  <div id="pageDraggable" class="pageDraggableMain" v-bind:class="classMainFlex">
     <div class="pageDraggableComs">
       <draggable  v-model="comList" :options="dragOptions" @start="isDragging=true" @end="dragEndSortList()">
         <transition-group type="transition" :name="'flip-list'" class="list-group" tag="div">
@@ -57,6 +57,12 @@
         getHideComList: 'getHideComList',
         getShowSideBar: 'getShowSideBar'
       }),
+      classMainFlex: function () {
+        return {
+          classMainFlexSpace: true
+//          classMainFlexCenter: !this.getShowSideBar
+        }
+      },
       comList: {
         get () {
 //          console.log('drag get value:' + JSON.stringify(this.getComList))
@@ -90,12 +96,18 @@
 <style scoped>
   .pageDraggableMain{
     display: flex;
-    justify-content: center;
     position: relative;
     width: 100%;
   }
+  .classMainFlexSpace{
+    justify-content: space-between;
+  }
+  .classMainFlexCenter{
+    justify-content: center;
+  }
   .pageDraggableComs{
-    max-width: 880px;
+    /*max-width: 880px;*/
+    min-width: 570px;
   }
   .ghost {
     opacity: 0.3;

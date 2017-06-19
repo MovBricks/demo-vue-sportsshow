@@ -21,21 +21,6 @@ const state = {
     }
   ],
   hideComList: [
-    {
-      name: 'com-sports-weight',
-      key: 'comSportsWeight',
-      showname: '体重'
-    },
-    {
-      name: 'com-page-sports',
-      key: 'comPageSports',
-      showname: '卡路里'
-    },
-    {
-      name: 'com-sports-steps',
-      key: 'comSportsSteps',
-      showname: '步数'
-    }
   ],
   showSideBar: false
 }

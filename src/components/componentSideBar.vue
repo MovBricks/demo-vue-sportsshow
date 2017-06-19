@@ -1,11 +1,11 @@
 <template>
   <!--<div id="pageSideBar" v-bind:class="classSideBarWidth">-->
-  <div id="pageSideBar" >
+  <div id="pageSideBar">
     <div class="pageSideBarIcon" v-on:click="changeShowSideBar ()">
         <img v-bind:class="{plusIcon:!getShowSideBar}" src="../assets/xclose.png" alt="">
     </div>
     <transition name="sideBar">
-      <div class="pageSideBarContext" v-show="getShowSideBar" v-bind:style="{width:450+'px'}">
+      <div class="pageSideBarContext" v-show="getShowSideBar" v-bind:style="{width:400+'px'}">
         <ul v-model="hideComList" class="pageSideBarContextList">
           <el-button type="primary" size="large" v-for="item in hideComList" :key="item.key" v-on:click="removeHideItem (item)">
             {{ item.showname }}
@@ -74,7 +74,8 @@
     height: 150px;
     overflow-x: hidden;
     /*position: relative;*/
-    max-width: 450px;
+    /*max-width: 450px;*/
+    /*width: 100%;*/
   }
   .sideBarShowWidth{
     width: 450px;

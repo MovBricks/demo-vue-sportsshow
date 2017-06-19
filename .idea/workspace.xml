@@ -18,8 +18,8 @@
       <file leaf-file-name="storeDraggableComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+            <state relative-caret-position="-242">
+              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -28,10 +28,11 @@
       <file leaf-file-name="pageDraggable.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/pageDraggable.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            <state relative-caret-position="330">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#745#781#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="componentSideBar.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="154">
+              <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -59,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>store</find>
       <find>types</find>
       <find>router</find>
       <find>axiosGetDetailCalorie</find>
@@ -89,6 +89,7 @@
       <find>mapActions</find>
       <find>pageDraggable</find>
       <find>isDragging</find>
+      <find>880px</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,8 +146,8 @@
         <option value="$PROJECT_DIR$/src/store/modules/storeSportsPie.js" />
         <option value="$PROJECT_DIR$/src/store/modules/storeCalenderSportsSteps.js" />
         <option value="$PROJECT_DIR$/src/components/componentSportsWeight.vue" />
-        <option value="$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js" />
         <option value="$PROJECT_DIR$/src/components/componentSideBar.vue" />
+        <option value="$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js" />
         <option value="$PROJECT_DIR$/src/pages/pageDraggable.vue" />
       </list>
     </option>
@@ -510,12 +511,12 @@
       <workItem from="1497525313657" duration="3200000" />
       <workItem from="1497582616559" duration="13833000" />
       <workItem from="1497784516143" duration="11416000" />
-      <workItem from="1497842632049" duration="5133000" />
+      <workItem from="1497842632049" duration="8626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327117000" />
+    <option name="totallyTimeSpent" value="330610000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,6 +529,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19344774" sideWeight="0.4954008" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -536,7 +538,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18340611" sideWeight="0.5045992" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076924" sideWeight="0.49781898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076924" sideWeight="0.49781898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -814,6 +816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -870,28 +873,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js">
+    <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+        <state relative-caret-position="154">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
+    <entry file="file://$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="-242">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageDraggable.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="330">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#745#781#0" expanded="true" />
           </folding>
         </state>
       </provider>
