@@ -16,7 +16,7 @@ const getters = {
 // actions
 const actions = {
   changeCalorieNow ({commit}, now) {
-    console.log('vuex changeCalorieNow:' + now)
+    // console.log('vuex changeCalorieNow:' + now)
     commit(types.CHANGE_CALORIE_NOW, now)
   },
   changeCalorieTarget ({commit}, target) {

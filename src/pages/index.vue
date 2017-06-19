@@ -48,6 +48,11 @@
       </div>
       <div class="img-box">
         <p class="img-item">
+          <a class="page-link" href="#/pageSideBar">pageSideBar侧边栏</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
           <a class="page-link" href="#/pageMain">pageMain主页</a>
         </p>
       </div>

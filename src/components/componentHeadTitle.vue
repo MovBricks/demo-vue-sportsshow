@@ -11,7 +11,9 @@
     <div>
       <el-button icon="setting" size="large" class="headerButton"></el-button>
       <el-button icon="message" size="large" class="headerButton"></el-button>
-      <slot name="comp-head-title-nav-icon"></slot>
+      <div class="headerUserIcon">
+        <slot name="comp-head-title-nav-icon" ></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +53,16 @@
   .litImage{
     width: 16px;
     height: 16px;
+  }
+  .headerUserIcon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    overflow:hidden;
+  }
+  .headerUserIcon img{
+    width: 100%;
+    height: 100%;
   }
 </style>
 

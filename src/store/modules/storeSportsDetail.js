@@ -127,7 +127,7 @@ const state = {
 // getters
 const getters = {
   getTimeCalorie: state => {
-    console.log('vuex getTimeCalorie: ' + state.timeCalorie.length)
+    // console.log('vuex getTimeCalorie: ' + state.timeCalorie.length)
     return state.timeCalorie
   }
 }

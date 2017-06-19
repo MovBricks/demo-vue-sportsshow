@@ -23,9 +23,9 @@ Vue.prototype.axios = axios
 /* eslint-disable no-new */
 var vm = new Vue({
   el: '#app',
+  store,
   axios,
   router,
-  store,
   template: '<App/>',
   components: { App }
 })

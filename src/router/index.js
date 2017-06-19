@@ -13,6 +13,7 @@ import sportsWeight from '../pages/pageSportsWeight.vue'
 import pageDraggable from '../pages/pageDraggable.vue'
 import pageMain from '../pages/pageMain.vue'
 import NotFoundComponent from '../components/Hello.vue'
+import pageSideBar from '../components/componentSideBar.vue'
 
 Vue.use(Router)
 
@@ -69,6 +70,11 @@ export default new Router({
       path: '/pageDraggable',
       name: 'pageDraggable',
       component: pageDraggable
+    },
+    {
+      path: '/pageSideBar',
+      name: 'pageSideBar',
+      component: pageSideBar
     },
     {
       path: '/pageMain',

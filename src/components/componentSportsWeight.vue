@@ -184,7 +184,7 @@
     },
     mounted () {
       this.$nextTick(function () {
-        console.log('makeTestData:' + JSON.stringify(this.makeTestData()))
+//        console.log('makeTestData:' + JSON.stringify(this.makeTestData()))
         this.option.series[0].data = this.makeTestData()
         this.drawPie('sports-weight-echarts-canvas')
       })

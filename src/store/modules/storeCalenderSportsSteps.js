@@ -12,7 +12,7 @@ const state = {
 // getters
 const getters = {
   getStepsData: state => {
-    console.log('vuex getStepsData!!')
+    // console.log('vuex getStepsData!!')
     return state.stepsData
   }
 }

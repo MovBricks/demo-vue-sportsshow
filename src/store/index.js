@@ -6,6 +6,7 @@ import * as mutations from './mutations'
 import storeSportsPie from './modules/storeSportsPie'
 import storeSportsDetail from './modules/storeSportsDetail'
 import storeCalenderSportsSteps from './modules/storeCalenderSportsSteps'
+import storeDraggableComponent from './modules/storeDraggableComponent'
 
 Vue.use(Vuex)
 
@@ -16,7 +17,8 @@ export default new Vuex.Store({
   modules: {
     storeSportsPie,
     storeSportsDetail,
-    storeCalenderSportsSteps
+    storeCalenderSportsSteps,
+    storeDraggableComponent
   },
   strict: process.env.NODE_ENV !== 'production'
 })

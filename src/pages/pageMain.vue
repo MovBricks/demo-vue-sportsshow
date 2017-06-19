@@ -6,7 +6,6 @@
       </div>
     </div>
     <div class="mainContext">
-      <com-page-navbar class="mainContextNav"></com-page-navbar>
       <com-page-draggable class="mainContextDraggable"></com-page-draggable>
     </div>
   </div>
@@ -14,14 +13,14 @@
 
 <script>
   import comPageDraggable from './pageDraggable.vue'
-  import comPageNavBar from './pageNavBar.vue'
+  import comPageSideBar from '../components/componentSideBar.vue'
   import comPageTopHeader from './pageTopHeader.vue'
 
   export default {
     name: 'pageSports',
     components: {
       'com-page-topheader': comPageTopHeader,
-      'com-page-navbar': comPageNavBar,
+      'com-page-sidebar': comPageSideBar,
       'com-page-draggable': comPageDraggable
     },
     data: function () {
@@ -47,9 +46,11 @@
   .mainContext{
     padding-top: 10px;
     display: flex;
+    justify-content: center;
   }
   .mainContextDraggable{
-    border-left: solid 10px darkblue;
+    border-left: solid 0px darkblue;
+    /*width: 855px;*/
   }
 
 </style>
