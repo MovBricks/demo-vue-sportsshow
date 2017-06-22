@@ -35,21 +35,34 @@
 </script>
 
 <style scoped>
+  #pageMain{
+    position: absolute;
+    /*top: 84px;*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(246,247,251);
+  }
   .mainHeader{
-    border-bottom: solid 10px darkred;
+    /*border-bottom: solid 10px datazarkred;*/
     display: flex;
     justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    background-color: rgb(48,55,73);
   }
   .mainHeader>div{
-    width: 60%;
+    width: 100%;
   }
   .mainContext{
     padding-top: 10px;
     display: flex;
     justify-content: center;
+
   }
   .mainContextDraggable{
-    border-left: solid 0px darkblue;
+    /*border-left: solid 5px darkblue;*/
     /*width: 855px;*/
   }
 

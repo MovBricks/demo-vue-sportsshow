@@ -1,20 +1,26 @@
 <template>
   <div class="compHeaderTitleNav">
-    <div>
-      <el-button size="large" class="headerButton">
-        <img class="litImage" src="../assets/imgLit/lit-person.png" alt="个人">个人</el-button>
-      <el-button size="large" class="headerButton">
-        <img class="litImage" src="../assets/imgLit/lit-home.png" alt="主页">主页</el-button>
-      <el-button size="large" class="headerButton">
-        <img class="litImage" src="../assets/imgLit/lit-friends.png" alt="朋友">朋友</el-button>
+    <div class="headerLogo">
+      <img class="logoImage" src="../assets/Nuclear.png" alt="logo">猛男计划
     </div>
-    <div>
-      <el-button icon="setting" size="large" class="headerButton"></el-button>
-      <el-button icon="message" size="large" class="headerButton"></el-button>
+    <ul class="headerChoseItems">
+      <li v-for="(item, index) in items" v-on:click="navClickEvent(items,index)" >
+        <a class="headerButton" :class="{headerButtonClicked:item.active}">
+          <!--<img class="litImage" src="../assets/imgLit/lit-person.png" alt="个人">-->
+          {{item.text}}</a>
+      </li>
+    </ul>
+    <ul class="headerUsr">
+      <li>
+        <i class="el-icon-setting"></i>
+      </li>
+      <li>
+        <i class="el-icon-message"></i>
+      </li>
       <div class="headerUserIcon">
         <slot name="comp-head-title-nav-icon" ></slot>
       </div>
-    </div>
+    </ul>
   </div>
 </template>
 
@@ -22,6 +28,20 @@
   export default {
     data: function () {
       return {
+        items: [
+          {
+            text: '个人',
+            active: true
+          },
+          {
+            text: '朋友',
+            active: false
+          },
+          {
+            text: '广场',
+            active: false
+          }
+        ]
       }
     },
     methods: {
@@ -31,32 +51,87 @@
           el.active = false
         })
         items[index].active = true
-        /* 开放用户自定义的接口 */
-        this.$emit('navClickEvent', items, index)
       }
     }
   }
 </script>
 <style scoped>
-
+  ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
   .compHeaderTitleNav,
-  .compHeaderTitleNav>div{
+  .compHeaderTitleNav>*{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
+  }
+  .compHeaderTitleNav{
+    /*justify-content: space-between;*/
+  }
+
+  .headerLogo{
+    padding-left: 10px;
+    /*display: flex;*/
+    font-size: 2rem;
+    color: rgb(156,160,169);
+    flex: 1 0 auto;
+  }
+  .logoImage{
+    height: 40px;
   }
 
   .headerButton{
+    /*box-sizing: border-box;*/
+    display: inline-block;
     border-width: 0;
+    /*background-color: rgb(156,160,169);*/
+    color: rgb(156,160,169);
+    cursor: pointer;
+    padding: 10px 10px;
+    font-size: 1rem;
+  }
+  .headerButton:hover{
+    color: rgb(255,255,255);
+    /*background-color: rgba(210,212,217,0.5);*/
+  }
+  .headerButtonClicked{
+    border-bottom:  5px solid rgb(70,120,216);
+    color: rgb(255,255,255);
   }
 
+  .headerChoseItems{
+    /*display: flex;*/
+    flex: 2 0 auto;
+    justify-content: center;
+    align-items: baseline;
+  }
   .litImage{
     width: 16px;
     height: 16px;
   }
+
+  .headerUsr{
+    padding-right: 10px;
+    flex: 1.5 0 auto;
+    justify-content: flex-end;
+    color: rgb(156,160,169);
+  }
+  .headerUsr>li{
+    cursor: pointer;
+    width: 25px;
+    padding: 0 5px;
+  }
+  .headerUsr>li:hover{
+    color: rgb(255,255,255);
+  }
+
   .headerUserIcon{
-    width:50px;
-    height:50px;
+    padding: 0 5px;
+    cursor: pointer;
+    width:40px;
+    height:40px;
     border-radius:50%;
     overflow:hidden;
   }

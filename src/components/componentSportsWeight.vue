@@ -241,6 +241,7 @@
   .sportsPieContainer {
     display: flex;
     justify-content: center;
+    background-color: rgb(255,255,255);
   }
 
   .body {
@@ -252,11 +253,12 @@
     /*flex-direction:column;*/
     /*align-items:center;*/
     /*justify-content: center;*/
-  }
-
-  .main {
     box-sizing: border-box;
-    border: solid #D01257 1px;
+    border-radius:5px;
+    -webkit-box-shadow:0 0 10px rgba(136, 136, 136, .5);
+    -moz-box-shadow:0 0 10px rgba(136, 136, 136, .5);
+    box-shadow:0 0 10px rgba(136, 136, 136, .5);
+
   }
 
   .main .controls ul {

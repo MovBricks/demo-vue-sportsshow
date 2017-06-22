@@ -3,7 +3,7 @@
     <div class="pageDraggableComs">
       <draggable  v-model="comList" :options="dragOptions" @start="isDragging=true" @end="dragEndSortList()">
         <transition-group type="transition" :name="'flip-list'" class="list-group" tag="div">
-          <div v-for="item in comList" :key="item.key" class="test">
+          <div v-for="item in comList" :key="item.key">
             <el-button type="danger" class="comButton" icon="circle-cross" v-show="getShowSideBar"  v-on:click="removeShowItem (item)"></el-button>
             <component :is="item.name" ></component>
           </div>
