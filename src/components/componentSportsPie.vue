@@ -511,7 +511,10 @@
   .settings{
     box-sizing:border-box;
     padding: 5px 12px;
-    border: solid #D01257 1px;
+    border-radius:5px;
+    -webkit-box-shadow:0 0 10px rgba(136, 136, 136, .5);
+    -moz-box-shadow:0 0 10px rgba(136, 136, 136, .5);
+    box-shadow:0 0 10px rgba(136, 136, 136, .5);
   }
 
   .settingsTitle{

@@ -6,9 +6,9 @@
       </div>
     </div>
     <div class="mainContext">
-      <com-page-draggable class="mainContextDraggable"></com-page-draggable>
-      <!--<div v-show="">朋友PK</div>-->
-      <!--<div v-show="">广场闲逛</div>-->
+      <com-page-draggable v-show="contextPageIndex===0"></com-page-draggable>
+      <div v-show="contextPageIndex===1">朋友PK</div>
+      <div v-show="contextPageIndex===2">广场闲逛</div>
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@
   import comPageDraggable from './pageDraggable.vue'
   import comPageSideBar from '../components/componentSideBar.vue'
   import comPageTopHeader from './pageTopHeader.vue'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'pageSports',
@@ -32,6 +33,9 @@
     methods: {
     },
     computed: {
+      ...mapGetters({
+        contextPageIndex: 'getContextPageIndex'
+      })
     }
   }
 </script>
@@ -62,10 +66,6 @@
     display: flex;
     justify-content: center;
 
-  }
-  .mainContextDraggable{
-    /*border-left: solid 5px darkblue;*/
-    /*width: 855px;*/
   }
 
 </style>

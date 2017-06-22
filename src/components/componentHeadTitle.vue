@@ -23,6 +23,8 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
+
   export default {
     data: function () {
       return {
@@ -49,7 +51,11 @@
           el.active = false
         })
         items[index].active = true
-      }
+        this.changeContextPageIndex(index)
+      },
+      ...mapActions([
+        'changeContextPageIndex'
+      ])
     }
   }
 </script>

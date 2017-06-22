@@ -7,6 +7,7 @@ import storeSportsPie from './modules/storeSportsPie'
 import storeSportsDetail from './modules/storeSportsDetail'
 import storeCalenderSportsSteps from './modules/storeCalenderSportsSteps'
 import storeDraggableComponent from './modules/storeDraggableComponent'
+import storeHeadTitle from './modules/storeHeadTitle'
 
 Vue.use(Vuex)
 
@@ -18,7 +19,8 @@ export default new Vuex.Store({
     storeSportsPie,
     storeSportsDetail,
     storeCalenderSportsSteps,
-    storeDraggableComponent
+    storeDraggableComponent,
+    storeHeadTitle
   },
   strict: process.env.NODE_ENV !== 'production'
 })
