@@ -31,9 +31,36 @@
       <file leaf-file-name="componentSportsPie.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/componentSportsPie.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3043">
-              <caret line="371" column="48" lean-forward="false" selection-start-line="371" selection-start-column="48" selection-end-line="371" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="132">
+              <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="4" selection-end-line="368" selection-end-column="22" />
+              <folding>
+                <element signature="n#template#0;n#!!top" expanded="false" />
+                <element signature="e#3818#9404#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="componentHeadTitle.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1980">
+              <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+              <folding>
+                <element signature="n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="componentCalenderSportsSteps.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="216" column="3" lean-forward="false" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
+              <folding>
+                <element signature="n#script#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,9 +79,10 @@
         <entry file="file://$PROJECT_DIR$/src/pages/pageMain.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -142,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/components/componentSportsDetail.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageTopHeader.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageNavBar.vue" />
-        <option value="$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/pages/index.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/storeDraggbleComponent.js" />
@@ -155,11 +182,12 @@
         <option value="$PROJECT_DIR$/src/store/modules/storeCalenderSportsSteps.js" />
         <option value="$PROJECT_DIR$/src/components/componentSideBar.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/storeDraggableComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/componentHeadTitle.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageDraggable.vue" />
         <option value="$PROJECT_DIR$/src/components/componentSportsWeight.vue" />
         <option value="$PROJECT_DIR$/src/components/componentSportsPie.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue" />
+        <option value="$PROJECT_DIR$/src/components/componentHeadTitle.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageMain.vue" />
       </list>
     </option>
@@ -525,12 +553,12 @@
       <workItem from="1497784516143" duration="11416000" />
       <workItem from="1497842632049" duration="9281000" />
       <workItem from="1498049574555" duration="1547000" />
-      <workItem from="1498099445660" duration="10798000" />
+      <workItem from="1498099445660" duration="13743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343610000" />
+    <option name="totallyTimeSpent" value="346555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,7 +570,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="7" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19344774" sideWeight="0.4954008" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -718,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding>
-            <element signature="e#263#292#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageSportsSteps.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -864,16 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="107" column="26" lean-forward="false" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
-          <folding>
-            <element signature="n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -908,14 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentSportsPie.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="371" column="48" lean-forward="false" selection-start-line="371" selection-start-column="48" selection-end-line="371" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/componentSportsWeight.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -927,12 +927,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="216" column="3" lean-forward="false" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
+          <folding>
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/componentSportsPie.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="4" selection-end-line="368" selection-end-column="22" />
+          <folding>
+            <element signature="n#template#0;n#!!top" expanded="false" />
+            <element signature="e#3818#9404#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding>
+            <element signature="n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageMain.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -5,9 +5,7 @@
     </div>
     <ul class="headerChoseItems">
       <li v-for="(item, index) in items" v-on:click="navClickEvent(items,index)" >
-        <a class="headerButton" :class="{headerButtonClicked:item.active}">
-          <!--<img class="litImage" src="../assets/imgLit/lit-person.png" alt="个人">-->
-          {{item.text}}</a>
+        <a class="headerButton" :class="{headerButtonClicked:item.active}">{{item.text}}</a>
       </li>
     </ul>
     <ul class="headerUsr">
@@ -30,15 +28,15 @@
       return {
         items: [
           {
-            text: '个人',
+            text: '个人数据',
             active: true
           },
           {
-            text: '朋友',
+            text: '朋友PK',
             active: false
           },
           {
-            text: '广场',
+            text: '广场闲逛',
             active: false
           }
         ]
@@ -89,15 +87,18 @@
     /*background-color: rgb(156,160,169);*/
     color: rgb(156,160,169);
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 10px 0px;
+    margin: 0 10px;
     font-size: 1rem;
+    text-align: center;
+    width: 80px;
   }
   .headerButton:hover{
     color: rgb(255,255,255);
     /*background-color: rgba(210,212,217,0.5);*/
   }
   .headerButtonClicked{
-    border-bottom:  5px solid rgb(70,120,216);
+    border-bottom: 3px solid rgb(70,120,216);
     color: rgb(255,255,255);
   }
 

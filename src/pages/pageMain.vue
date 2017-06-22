@@ -7,6 +7,8 @@
     </div>
     <div class="mainContext">
       <com-page-draggable class="mainContextDraggable"></com-page-draggable>
+      <!--<div v-show="">朋友PK</div>-->
+      <!--<div v-show="">广场闲逛</div>-->
     </div>
   </div>
 </template>
