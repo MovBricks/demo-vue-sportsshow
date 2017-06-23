@@ -213,8 +213,8 @@
 
   .settings,
   .main {
-    width: 275px;
-    height: 275px;
+    width: 280px;
+    height: 280px;
     /*margin: 0 auto;*/
     position: absolute;
     left: calc(50% - 137.5px);
@@ -247,8 +247,8 @@
   .body {
     position: relative;
     overflow: hidden;
-    width: 275px;
-    height: 275px;
+    width: 280px;
+    height: 280px;
     /*display: flex;*/
     /*flex-direction:column;*/
     /*align-items:center;*/
@@ -281,8 +281,8 @@
 
   .weightGoal {
     position: relative;
-    width: 275px;
-    height: 275px;
+    width: 280px;
+    height: 280px;
   }
 
   .meter-center-icon {
@@ -472,7 +472,7 @@
   }
 
   .rotatey-leave-active {
-    transform: translateX(275px);
+    transform: translateX(280px);
     transition: transform 1s;
   }
 
@@ -486,7 +486,7 @@
   }
 
   .rotatey-enter {
-    transform: translateX(-275px);
+    transform: translateX(-280px);
   }
 
   @import './css/normalize.css';

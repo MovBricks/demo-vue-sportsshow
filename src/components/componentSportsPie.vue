@@ -324,8 +324,8 @@
   }
   .settings,
   .main{
-    width: 275px;
-    height: 275px;
+    width: 280px;
+    height: 280px;
     /*margin: 0 auto;*/
     position: absolute;
     left: calc(50% - 137.5px);
@@ -359,8 +359,8 @@
   .body{
     position: relative;
     /*overflow: hidden;*/
-    width: 275px;
-    height: 275px;
+    width: 280px;
+    height: 280px;
     /*display: flex;*/
     /*flex-direction:column;*/
     /*align-items:center;*/
@@ -423,7 +423,7 @@
     top: 274px;
     display: flex;
     justify-content: center;
-    width: 275px;
+    width: 280px;
   }
   .controls ul{
     margin: 0;

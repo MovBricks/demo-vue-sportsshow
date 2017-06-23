@@ -1,6 +1,7 @@
 <template>
-  <div id="pageDraggable" class="pageDraggableMain" v-bind:class="classMainFlex">
-    <div class="pageDraggableComs">
+  <div id="pageDraggable" class="pageDraggableMain">
+    <transition name="coms-translate">
+    <div class="pageDraggableComs" v-bind:class="classComsLeft">
       <draggable  v-model="comList" :options="dragOptions" @start="isDragging=true" @end="dragEndSortList()">
         <transition-group type="transition" :name="'flip-list'" class="list-group" tag="div">
           <div v-for="item in comList" :key="item.key">
@@ -10,7 +11,8 @@
         </transition-group>
       </draggable>
     </div>
-    <com-side-bar></com-side-bar>
+    </transition>
+    <com-side-bar class="pageDraggableSideBar"></com-side-bar>
   </div>
 </template>
 
@@ -57,10 +59,10 @@
         getHideComList: 'getHideComList',
         getShowSideBar: 'getShowSideBar'
       }),
-      classMainFlex: function () {
+      classComsLeft: function () {
         return {
-          classMainFlexSpace: true
-//          classMainFlexCenter: !this.getShowSideBar
+          classComsLeftLeft: this.getShowSideBar,
+          classComsLeftCenter: !this.getShowSideBar
         }
       },
       comList: {
@@ -99,15 +101,19 @@
     position: relative;
     width: 100%;
   }
-  .classMainFlexSpace{
-    justify-content: space-between;
+  .classComsLeftLeft{
+    left: 0;
   }
-  .classMainFlexCenter{
-    justify-content: center;
+  .classComsLeftCenter{
+    left: calc((100% - 900px)/2);
   }
   .pageDraggableComs{
     /*max-width: 880px;*/
-    min-width: 570px;
+    /*min-width: 570px;*/
+    /*max-width: 900px;*/
+    width: 900px;
+    position: absolute;
+    transition: left 1s ease;
   }
   .ghost {
     opacity: 0.3;
@@ -120,8 +126,8 @@
   }
   .list-group>*{
     /*transition: all 1s ease;*/
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
     position: relative;
   }
   .comButton{
@@ -130,4 +136,22 @@
     top: 3px;
     z-index: 99;
   }
+  .pageDraggableSideBar{
+    position: absolute;
+    right: 0;
+    z-index: 110;
+  }
+
+  /*.coms-translate-enter-active, .coms-translate-leave-active {*/
+    /*transition: all 1s;*/
+  /*}*/
+  /*.coms-translate-enter, .coms-translate-leave-active {*/
+    /*opacity: 0;*/
+  /*}*/
+  /*.coms-translate-enter {*/
+    /*!*transform: translateX(31px);*!*/
+  /*}*/
+  /*.coms-translate-leave-active {*/
+    /*!*transform: translateX(-31px);*!*/
+  /*}*/
 </style>

@@ -205,15 +205,15 @@
     /*justify-content: center;*/
     /*align-items: center;*/
 
-  }
-
-  .chartContainer{
-    width: 560px;
-    height: 275px;
-    border-radius:5px;
     -webkit-box-shadow:0 0 10px rgba(136, 136, 136, .5);
     -moz-box-shadow:0 0 10px rgba(136, 136, 136, .5);
     box-shadow:0 0 10px rgba(136, 136, 136, .5);
+  }
+
+  .chartContainer{
+    width: 580px;
+    height: 280px;
+    border-radius:5px;
   }
 
 

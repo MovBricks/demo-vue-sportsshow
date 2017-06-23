@@ -93,7 +93,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 101;
+    z-index: 120;
   }
   .pageSideBarIcon>img{
     width: 100%;
