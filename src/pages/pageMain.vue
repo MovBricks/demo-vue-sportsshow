@@ -100,29 +100,29 @@
   }
 
   .component-translate-fade-enter-active, .component-translate-fade-leave-active {
-    transition: all .3s ease-out;
+    transition: all .4s ease;
   }
   .component-translate-fade-enter, .component-translate-fade-leave-active {
     opacity: 0;
   }
   .component-translate-fade-enter {
-    transform: translateX(130px);
+    transform: translateX(100px);
   }
   .component-translate-fade-leave-active {
-    transform: translateX(-130px);
+    transform: translateX(-100px);
   }
 
   .component-translate-fade-reverse-enter-active, .component-translate-fade-reverse-leave-active {
-    transition: all .5s ease-out;
+    transition: all .4s ease;
   }
   .component-translate-fade-reverse-enter, .component-translate-fade-reverse-leave-active {
     opacity: 0;
   }
   .component-translate-fade-reverse-enter {
-    transform: translateX(-130px);
+    transform: translateX(-100px);
   }
   .component-translate-fade-reverse-leave-active {
-    transform: translateX(130px);
+    transform: translateX(100px);
   }
 
 </style>

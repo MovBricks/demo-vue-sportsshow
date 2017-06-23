@@ -28,9 +28,10 @@
       <file leaf-file-name="pageMain.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/pageMain.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
+            <state relative-caret-position="315">
               <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
               <folding>
+                <element signature="n#script#0;n#!!top" expanded="false" />
                 <element signature="e#589#637#0" expanded="true" />
               </folding>
             </state>
@@ -51,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/pageQuiList.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="49" />
+              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -60,9 +61,11 @@
       <file leaf-file-name="componentSideBar.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="-1533">
+              <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+              <folding>
+                <element signature="n#script#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reset.import</find>
       <find>quiArrow</find>
       <find>sportsStepsContainer</find>
       <find>chartContainer</find>
@@ -129,6 +131,7 @@
       <find>100%</find>
       <find>drawEcharts</find>
       <find>sports-detail-echarts-canvas</find>
+      <find>width</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,10 +186,10 @@
         <option value="$PROJECT_DIR$/src/components/componentCalenderSportsSteps.vue" />
         <option value="$PROJECT_DIR$/src/components/componentHeadTitle.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageDraggable.vue" />
-        <option value="$PROJECT_DIR$/src/components/componentSideBar.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageSports.vue" />
         <option value="$PROJECT_DIR$/src/components/componentSportsDetail.vue" />
         <option value="$PROJECT_DIR$/src/store/modules/storeHeadTitle.js" />
+        <option value="$PROJECT_DIR$/src/components/componentSideBar.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageMain.vue" />
       </list>
     </option>
@@ -513,12 +516,12 @@
       <workItem from="1497842632049" duration="9281000" />
       <workItem from="1498049574555" duration="1547000" />
       <workItem from="1498099445660" duration="16827000" />
-      <workItem from="1498189118292" duration="15647000" />
+      <workItem from="1498189118292" duration="17204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365286000" />
+    <option name="totallyTimeSpent" value="366843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,14 +535,14 @@
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19344774" sideWeight="0.4954008" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19344774" sideWeight="0.4954008" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25779626" sideWeight="0.50218105" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18340611" sideWeight="0.5045992" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076924" sideWeight="0.49781898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076924" sideWeight="0.49781898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -889,18 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageQuiList.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="49" />
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -929,11 +924,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1533">
+          <caret line="84" column="3" lean-forward="false" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+          <folding>
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageMain.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
+        <state relative-caret-position="315">
           <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
           <folding>
+            <element signature="n#script#0;n#!!top" expanded="false" />
             <element signature="e#589#637#0" expanded="true" />
           </folding>
         </state>

@@ -76,7 +76,7 @@
   #pageSideBar{
     /*overflow-x: hidden;*/
     /*position: relative;*/
-    min-width: 350px;
+    /*min-width: 350px;*/
     max-height: 500px;
     box-sizing: border-box;
   }
