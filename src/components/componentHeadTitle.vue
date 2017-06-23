@@ -76,6 +76,7 @@
   }
 
   .headerLogo{
+    cursor: default;
     padding-left: 10px;
     /*display: flex;*/
     font-size: 2rem;
@@ -98,6 +99,8 @@
     font-size: 1rem;
     text-align: center;
     width: 80px;
+    transition: border-color .3s,background-color .3s,color .3s;
+    border-bottom: 3px solid transparent;
   }
   .headerButton:hover{
     color: rgb(255,255,255);

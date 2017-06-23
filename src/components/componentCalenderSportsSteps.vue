@@ -2,7 +2,7 @@
 <template>
   <div class="sportsStepsContainer">
     <div class="chartContainer" id="calender-sports-steps-echarts-canvas"></div>
-    <el-button type="success" v-on:click="axiosGetCalenderSteps()">获取模拟数据</el-button>
+    <el-button style="position: absolute;bottom: 0;right: 0;" size="small" type="info" v-on:click="axiosGetCalenderSteps()">获取模拟数据</el-button>
   </div>
 </template>
 

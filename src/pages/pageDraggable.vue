@@ -76,7 +76,7 @@
       dragOptions () {
         return {
           disabled: !this.getShowSideBar,
-          delay: 30,
+//          delay: 30,
           animation: 500,
           filter: '.backdrop',
           ghostClass: 'ghost'
@@ -120,14 +120,14 @@
   }
   .list-group>*{
     /*transition: all 1s ease;*/
-    padding-left: 10px;
-    padding-bottom: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     position: relative;
   }
   .comButton{
     position: absolute;
     right: 3px;
     top: 3px;
-    z-index: 100;
+    z-index: 99;
   }
 </style>

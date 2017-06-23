@@ -1,7 +1,7 @@
 <template>
   <div id="pageSports">
     <com-sports-pie numberUnit="Calorie" v-on:expandClick="showSportsDetail()"></com-sports-pie>
-    <com-sports-detail v-show=sportsDetailShow v-on:overlayClick="hideSportsDetail()"></com-sports-detail>
+    <com-sports-detail v-if=sportsDetailShow v-on:overlayClick="hideSportsDetail()"></com-sports-detail>
   </div>
 </template>
 
