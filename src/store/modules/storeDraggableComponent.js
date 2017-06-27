@@ -7,7 +7,17 @@ const state = {
     {
       name: 'com-sports-weight',
       key: 'comSportsWeight',
-      showname: '体重'
+      showname: '月均体重'
+    },
+    {
+      name: 'com-sports-water',
+      key: 'comSportsWater',
+      showname: '每日饮水'
+    },
+    {
+      name: 'com-sports-heart',
+      key: 'comSportsHeart',
+      showname: '心率'
     },
     {
       name: 'com-page-sports',

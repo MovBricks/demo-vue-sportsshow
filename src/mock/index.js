@@ -22,6 +22,9 @@ var mockstart = function () {
       'data': []
     }
   })
+  Mock.mock('/needwater', {
+    'needWater|500-1800': 1
+  })
 }
 
 export default mockstart

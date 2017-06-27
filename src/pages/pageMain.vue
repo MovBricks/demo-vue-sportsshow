@@ -55,8 +55,6 @@
         return this.comNameArray[this.contextPageIndex]
       },
       transitionName: function () {
-        console.log(this.contextPageLastIndex + '>' + this.contextPageIndex)
-        console.log(this.contextPageLastIndex > this.contextPageIndex)
         if (this.contextPageLastIndex > this.contextPageIndex) {
           return 'component-translate-fade-reverse'
         } else {

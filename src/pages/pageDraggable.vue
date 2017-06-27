@@ -19,6 +19,8 @@
 <script>
   import draggable from 'vuedraggable'
   import { mapGetters, mapActions } from 'vuex'
+  import comSportsHeart from '../components/componentSportsHeart.vue'
+  import comSportsWater from '../components/componentSportsWater.vue'
   import comSportsWeight from '../components/componentSportsWeight.vue'
   import comSportsSteps from '../components/componentCalenderSportsSteps.vue'
   import comPageSports from './pageSports.vue'
@@ -29,7 +31,9 @@
     components: {
       'draggable': draggable,
       'com-side-bar': comSideBar,
+      'com-sports-water': comSportsWater,
       'com-sports-weight': comSportsWeight,
+      'com-sports-heart': comSportsHeart,
       'com-page-sports': comPageSports,
       'com-sports-steps': comSportsSteps
     },

@@ -14,6 +14,8 @@ import pageDraggable from '../pages/pageDraggable.vue'
 import pageSideBar from '../components/componentSideBar.vue'
 import pageMain from '../pages/pageMain.vue'
 import NotFoundComponent from '../components/Hello.vue'
+import sportsWater from '../components/componentSportsWater.vue'
+import pagePiazzaTalk from '../pages/pagePiazzaTalk.vue'
 
 Vue.use(Router)
 
@@ -64,9 +66,19 @@ const devRoutesArray = [
     component: sportsWeight
   },
   {
+    path: '/sportsWater',
+    name: 'sportsWater',
+    component: sportsWater
+  },
+  {
     path: '/pageDraggable',
     name: 'pageDraggable',
     component: pageDraggable
+  },
+  {
+    path: '/pagePiazzaTalk',
+    name: 'pagePiazzaTalk',
+    component: pagePiazzaTalk
   },
   {
     path: '/pageSideBar',

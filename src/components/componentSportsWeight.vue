@@ -2,7 +2,7 @@
 <template>
   <div class="sportsPieContainer">
     <div class="body">
-        <div class="main" v-show="!settingShow">
+        <div class="main">
           <div class="content">
             <h2 class="tileTitle" style="display: none;">
               <span class="title">体重</span>
@@ -27,7 +27,7 @@
                 <li class="weight">
                   <span class="stat metricLarge metricContainer">
                     <i class="fitglyph fitglyph-weight size-d"></i>
-                    <span class="number">50.0</span>
+                    <span class="number">{{lastWeight}}</span>
                     <span class="unit">公斤</span>
                   </span>
                 </li>
@@ -50,10 +50,7 @@
     },
     data: function () {
       return {
-        temporaryTarget: '',
-        settingShow: false,
-        controlsShow: false,
-        percentShow: false,
+        lastWeight: 0,
         chart: null,
         option: {
           legend: {
@@ -61,24 +58,29 @@
           },
           tooltip: {
             trigger: 'axis',
-            formatter: function (params) {
-              params = params[0]
-              var date = new Date(params.name)
-              return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1]
-            },
+//            formatter: function (params) {
+//              params = params[0]
+//              var date = new Date(params.name)
+//              return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1]
+//            },
             axisPointer: {
               type: 'shadow',
               animation: false
             }
           },
           xAxis: {
-            show: false,
-            type: 'time'
+            type: 'category',
+            data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            axisTick: {
+              show: false
+            }
           },
           yAxis: {
+//            show: false,
             type: 'value',
             scale: true,
-            boundaryGap: ['30%', '30%'],
+//            boundaryGap: ['100%', '100%'],
+            splitNumber: 3,
             splitLine: {
               show: true,
               lineStyle: {
@@ -89,7 +91,7 @@
               show: false
             },
             axisLabel: {
-              inside: true,
+//              inside: true,
               textStyle: {
                 baseline: 'top'
               }
@@ -99,8 +101,8 @@
             }
           },
           series: [{
-            name: '模拟数据',
-            type: 'line',
+            name: '月均体重',
+            type: 'bar',
             symbolSize: 8,
             lineStyle: {
               normal: {
@@ -113,9 +115,9 @@
                 borderWidth: 2
               }
             },
+//            data: this.makeTestData,
             showSymbol: true,
-            hoverAnimation: true,
-            data: this.makeTestData
+            hoverAnimation: true
           }]
         }
       }
@@ -128,14 +130,10 @@
         return this.target * 7
       },
       ...mapGetters({
-        now: 'getCalorieNow',
-        target: 'getCalorieTarget'
       })
     },
     methods: {
       ...mapActions([
-        'changeCalorieTarget',
-        'changeCalorieNow'
       ]),
       drawPie (id) {
         this.chart = echarts.init(document.getElementById(id))
@@ -143,44 +141,17 @@
       },
       makeTestData: function () {
         var data = []
-        var now = +new Date(1997, 9, 3)
-        var oneDay = 24 * 3600 * 1000
-        var value = Math.random() * 1000
+        var value = Math.random() * (110 - 45) + 45
         for (var i = 0; i < 10; i++) {
-          data.push((function () {
-            now = new Date(+now + oneDay)
-            value = value + Math.random() * 21 - 10
-            return {
-              name: now.toString(),
-              value: [
-                [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
-                Math.round(value)
-              ]
-            }
-          })())
+          value = value + Math.random() * 20 - 10
+          data.push(Math.round(value))
         }
+        this.lastWeight = data[data.length - 1]
         return data
-      },
-      expandClick () {
-        this.$emit('expandClick')
-      },
-      axiosGetNowCalorie () {
-        this.axios.get('/nowcalorie').then(response => {
-          console.log('/nowcalorie response:' + JSON.stringify(response.data))
-          this.changeCalorieNow(response.data)
-        }).catch((err) => {
-          console.log('axiosGetNowCalorie err:' + err)
-        })
       }
     },
     watch: {
       // 如果发生改变，这个函数就会运行
-      target: function () {
-        this.changePie(this.target, this.now)
-      },
-      now: function () {
-        this.changePie(this.target, this.now)
-      }
     },
     mounted () {
       this.$nextTick(function () {
@@ -268,8 +239,9 @@
 
   .echartsCanvas{
     position: absolute;
-    top: -50px;
-    width: 270px;
+    top: -45px;
+    left: 5px;
+    width: 280px;
     height: 280px;
   }
 

@@ -28,6 +28,11 @@
       </div>
       <div class="img-box">
         <p class="img-item">
+          <a class="page-link" href="#/sportsWater">sports饮水</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
           <a class="page-link" href="#/headtitle">headtitle</a>
         </p>
       </div>
@@ -54,6 +59,11 @@
       <div class="img-box">
         <p class="img-item">
           <a class="page-link" href="#/pageMain">pageMain主页</a>
+        </p>
+      </div>
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/pagePiazzaTalk">广场闲逛</a>
         </p>
       </div>
 
