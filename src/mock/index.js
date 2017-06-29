@@ -27,4 +27,6 @@ var mockstart = function () {
   })
 }
 
+mockstart()
+
 export default mockstart

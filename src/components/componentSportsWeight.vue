@@ -41,7 +41,10 @@
 
 
 <script>
-  import echarts from 'echarts'
+  import echarts from 'echarts/lib/echarts'
+  import 'echarts/lib/component/tooltip'
+  import 'echarts/lib/component/title'
+  import 'echarts/lib/chart/bar'
   import { mapGetters, mapActions } from 'vuex'
 
   export default {

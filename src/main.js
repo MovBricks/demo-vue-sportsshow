@@ -6,14 +6,14 @@ import router from './router'
 import store from './store'
 import axios from './axios.js'
 
-import ElementUI from 'element-ui'
+// import ElementUI from 'element-ui'
+import Button from 'element-ui/lib/button'
 import 'element-ui/lib/theme-default/index.css'
 
-import Mock from './mock'
+import './mock'
 
-Mock()
-
-Vue.use(ElementUI)
+Vue.use(Button)
+// Vue.use(Input)
 
 Vue.config.productionTip = false
 

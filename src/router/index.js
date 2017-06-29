@@ -5,7 +5,6 @@ import index from '../pages/index.vue'
 import pageQuiButton from '../pages/pageQuiButton.vue'
 import pageQuiList from '../pages/pageQuiList.vue'
 import pageQuiNav from '../pages/pageQuiNav.vue'
-import pageEchartsTest from '../pages/pageEchartsTest.vue'
 import pageSports from '../pages/pageSports.vue'
 import pageheadTitle from '../pages/pageHeadTitle.vue'
 import pageSportsSteps from '../pages/pageSportsSteps.vue'
@@ -39,11 +38,6 @@ const devRoutesArray = [
     path: '/nav',
     name: 'nav',
     component: pageQuiNav
-  },
-  {
-    path: '/show',
-    name: 'show',
-    component: pageEchartsTest
   },
   {
     path: '/sports',
