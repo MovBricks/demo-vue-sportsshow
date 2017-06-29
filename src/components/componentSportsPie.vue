@@ -396,7 +396,8 @@
     left: 120px;
     width: 32px;
     height: 40px;
-    background:  url(../assets/imgSports/calorie.png) no-repeat;
+    /*background:  url(../assets/imgSports/calorie.png) no-repeat;*/
+    background:  url(../../static/imgSports/calorie.png) no-repeat;
     background-size: contain;
   }
 

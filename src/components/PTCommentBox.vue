@@ -1,5 +1,5 @@
 <template>
-  <div class="commentBox" style="margin-top: 50px;margin-left: 50px">
+  <div class="commentBox">
     <div class="headIcon">
       <img src="../assets/timg.png" alt="Icon">
     </div>
