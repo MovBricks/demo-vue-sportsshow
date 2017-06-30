@@ -38,7 +38,7 @@
       return {
         commentInputText: '',
         commentExpend: false,
-        commentHeight: 30
+        commentHeight: 35
       }
     },
     props: {
@@ -72,7 +72,7 @@
           }
         }
         this.commentExpend = !this.commentExpend
-        this.commentHeight = this.commentExpend ? 80 : 30
+        this.commentHeight = this.commentExpend ? 80 : 35
       }
     }
   }
@@ -111,7 +111,7 @@
     box-sizing: border-box;
   }
   .commentTips{
-    overflow: hidden;
+    /*overflow: hidden;*/
     flex-grow: 1;
     /*color: #1DA1F2;*/
     height: 100%;
@@ -130,7 +130,7 @@
 
   .commentTipsWrapper{
     box-sizing: border-box;
-    padding: 2px 15px;
+    padding: 4px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;

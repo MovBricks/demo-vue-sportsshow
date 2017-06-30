@@ -18,7 +18,7 @@
 
 <script>
   import quiBtn from '../components/quiButton.vue'
-  import quiList from '../components/quiList.vue'
+  import pagePiazzaTalk from '../pages/pagePiazzaTalk.vue'
 
   import comPageDraggable from './pageDraggable.vue'
   import comPageSideBar from '../components/componentSideBar.vue'
@@ -29,7 +29,7 @@
     name: 'pageSports',
     components: {
       'qui-btn': quiBtn,
-      'qui-list': quiList,
+      'page-piazza-talk': pagePiazzaTalk,
       'com-page-topheader': comPageTopHeader,
       'com-page-sidebar': comPageSideBar,
       'com-page-draggable': comPageDraggable
@@ -39,7 +39,7 @@
         comNameArray: [
           'com-page-draggable',
           'qui-btn',
-          'qui-list'
+          'page-piazza-talk'
         ]
       }
     },
