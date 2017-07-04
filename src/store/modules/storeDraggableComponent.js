@@ -15,11 +15,6 @@ const state = {
       showname: '每日饮水'
     },
     {
-      name: 'com-sports-heart',
-      key: 'comSportsHeart',
-      showname: '心率'
-    },
-    {
       name: 'com-page-sports',
       key: 'comPageSports',
       showname: '卡路里'
@@ -31,6 +26,11 @@ const state = {
     }
   ],
   hideComList: [
+    {
+      name: 'com-sports-heart',
+      key: 'comSportsHeart',
+      showname: '心率'
+    }
   ],
   showSideBar: false
 }
