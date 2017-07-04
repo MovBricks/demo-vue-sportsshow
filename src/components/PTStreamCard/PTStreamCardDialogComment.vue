@@ -7,7 +7,7 @@
       </div>
       <div class="dialogContextCardsItemIconDetail">
         <div class="cardsItemHeadIcon">
-          <img src="../../assets/timg.png" alt="">
+          <img :src="commentReplyCardsItemHeadIconSrc" alt="">
           <!--<img src="https://pbs.twimg.com/profile_images/814218236904488960/XnQ8GQa__bigger.jpg" alt="">-->
         </div>
         <div class="cardsItemDetail">
@@ -25,9 +25,9 @@
           </div>
           <div class="commentTipsTool">
             <ul class="commentTipsToolEextras">
-              <li>
-                <button class="commentTipsToolEextrasButton"><img src="../../assets/picture.svg"/></button>
-              </li>
+              <!--<li>-->
+                <!--<button class="commentTipsToolEextrasButton"><img src="../../assets/picture.svg"/></button>-->
+              <!--</li>-->
             </ul>
             <button class="commentTipsToolSend">发送</button>
           </div>
@@ -43,15 +43,21 @@
     name: 'PTCommentBox',
     data: function () {
       return {
-        commentReplyInputText: '',
-        commentReplyCardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores, blanditiis doloribus eaque officia provident quasi quisquam rerum similique voluptatum.',
-        commentReplyCardsItemID: '我是用户名'
+        commentReplyInputText: ''
       }
     },
     props: {
-      countLike: {
-        default: 120,
-        type: Number
+      commentReplyCardsItemHeadIconSrc: {
+        default: '',
+        type: String
+      },
+      commentReplyCardsItemID: {
+        default: 'N/A',
+        type: String
+      },
+      commentReplyCardsItemText: {
+        default: 'N/A',
+        type: String
       }
     },
     components: {
@@ -161,7 +167,6 @@
   .cardsItemID{
     font-weight: bold;
   }
-  .cardsItemTime:hover,
   .cardsItemID:hover{
     cursor: pointer;
     color: #0084B4;

@@ -6,9 +6,6 @@
       </div>
     </div>
     <div class="mainContext">
-      <!--<com-page-draggable v-show="contextPageIndex===0"></com-page-draggable>-->
-      <!--<qui-btn v-show="contextPageIndex===1" msg="朋友PK"></qui-btn>-->
-      <!--<qui-btn v-show="contextPageIndex===2" msg="广场闲逛"></qui-btn>-->
       <transition v-bind:name="transitionName" mode="out-in">
         <component v-bind:is="comName"></component>
       </transition>
@@ -38,7 +35,6 @@
       return {
         comNameArray: [
           'com-page-draggable',
-          'qui-btn',
           'page-piazza-talk'
         ]
       }

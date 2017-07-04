@@ -101,11 +101,11 @@
     props: {
       initialTarget: {
         type: Number,
-        default: 2500
+        default: 8000
       },
       initialNow: {
         type: Number,
-        default: 900
+        default: 1
       },
       numberUnit: {
         default: '卡路里'
@@ -284,7 +284,10 @@
       },
       doneButtonClick () {
         this.hideSettingShow()
-        this.changeCalorieTarget({targetCalorie: this.temporaryTarget})
+        if (this.target !== this.temporaryTarget) {
+          this.changeCalorieTarget({targetCalorie: this.temporaryTarget})
+          this.axiosSetTargetCalorie()
+        }
       },
       axiosGetNowCalorie () {
         this.axios.get('/nowcalorie').then(response => {
@@ -292,6 +295,15 @@
           this.changeCalorieNow(response.data)
         }).catch((err) => {
           console.log('axiosGetNowCalorie err:' + err)
+        })
+      },
+      axiosSetTargetCalorie () {
+        this.axios.post('/settargetcalorie', {
+          targetCalorie: this.temporaryTarget
+        }).then(response => {
+          console.log('/settargetcalorie response:' + JSON.stringify(response.data))
+        }).catch((err) => {
+          console.log('axiosSetTargetCalorie err:' + err)
         })
       }
     },
@@ -306,6 +318,7 @@
     },
     mounted () {
       this.$nextTick(function () {
+        this.axiosGetNowCalorie()
         this.temporaryTarget = this.target
         this.drawPie('echarts-canvas')
       })

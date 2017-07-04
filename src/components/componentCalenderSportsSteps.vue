@@ -171,6 +171,7 @@
         this.axios.get('/calendersteps').then(response => {
           var resData = response.data
           resData.stepsData.data = this.makeTestData()
+//          console.log('/calendersteps response:' + JSON.stringify(resData.stepsData.data))
           this.changeStepsData(resData.stepsData)
         }).catch((err) => {
           console.log('axiosGetNowCalorie err:' + err)
@@ -187,9 +188,10 @@
     },
     mounted () {
       this.$nextTick(function () {
-        this.option.series[0].data = this.stepsData
-        this.option.series[1].data = this.stepsDataTop10
-        this.drawEcharts('calender-sports-steps-echarts-canvas')
+//        this.option.series[0].data = this.stepsData
+//        this.option.series[1].data = this.stepsDataTop10
+//        this.drawEcharts('calender-sports-steps-echarts-canvas')
+        this.axiosGetCalenderSteps()
       })
     }
   }

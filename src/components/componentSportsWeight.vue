@@ -4,13 +4,6 @@
     <div class="body">
         <div class="main">
           <div class="content">
-            <h2 class="tileTitle" style="display: none;">
-              <span class="title">体重</span>
-              <span class="afterTitle"></span>
-              <span class="tileInfo">?</span>
-              <span class="contentInfo">?</span>
-            </h2>
-            <div class="inner-content" style="display: none;"></div>
             <div class="weightGoal graph">
               <div class="graphContainer">
                 <div class="echartsCanvas" id="sports-weight-echarts-canvas"></div>
@@ -55,6 +48,7 @@
       return {
         lastWeight: 0,
         chart: null,
+        weightMonth: [],
         option: {
           legend: {
             show: false
@@ -118,7 +112,7 @@
                 borderWidth: 2
               }
             },
-//            data: this.makeTestData,
+            data: this.weightMonth,
             showSymbol: true,
             hoverAnimation: true
           }]
@@ -150,17 +144,31 @@
           data.push(Math.round(value))
         }
         this.lastWeight = data[data.length - 1]
+        console.log('weight data:' + data)
         return data
+      },
+      axiosGetWeightMonth () {
+        this.axios.get('/weightmonth').then(response => {
+          this.weightMonth = response.data.weightmonth
+          console.log('/weightmonth response:' + JSON.stringify(response.data))
+        }).catch((err) => {
+          console.log('axiosGetWeightMonth err:' + err)
+        })
       }
     },
     watch: {
-      // 如果发生改变，这个函数就会运行
+      weightMonth: function () {
+        this.option.series[0].data = this.weightMonth
+        this.lastWeight = this.weightMonth[this.weightMonth.length - 1]
+        this.drawPie('sports-weight-echarts-canvas')
+      }
     },
     mounted () {
       this.$nextTick(function () {
 //        console.log('makeTestData:' + JSON.stringify(this.makeTestData()))
-        this.option.series[0].data = this.makeTestData()
-        this.drawPie('sports-weight-echarts-canvas')
+        this.axiosGetWeightMonth()
+//        this.option.series[0].data = this.weightMonth
+//        this.drawPie('sports-weight-echarts-canvas')
       })
     }
   }

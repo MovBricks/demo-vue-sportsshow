@@ -8,11 +8,17 @@ import axios from './axios.js'
 
 // import ElementUI from 'element-ui'
 import Button from 'element-ui/lib/button'
+import Upload from 'element-ui/lib/upload'
+import Dialog from 'element-ui/lib/dialog'
+import Progress from 'element-ui/lib/progress'
 import 'element-ui/lib/theme-default/index.css'
 
 import './mock'
 
 Vue.use(Button)
+Vue.use(Upload)
+Vue.use(Dialog)
+Vue.use(Progress)
 // Vue.use(Input)
 
 // Vue.config.productionTip = false

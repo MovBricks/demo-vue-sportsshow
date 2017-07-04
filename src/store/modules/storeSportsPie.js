@@ -3,8 +3,8 @@ import * as types from '../mutation-types'
 // initial state
 // shape: [{ id, quantity }]
 const state = {
-  calorieNow: 400,
-  calorieTarget: 2000
+  calorieNow: 0,
+  calorieTarget: 8000
 }
 
 // getters

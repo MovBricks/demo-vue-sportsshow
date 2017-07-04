@@ -2,8 +2,8 @@
   <li>
     <div class="streamCardsItem">
       <div class="cardsItemHeadIcon">
-        <!--<img src="../assets/timg.png" alt="">-->
-        <img src="https://pbs.twimg.com/profile_images/814218236904488960/XnQ8GQa__bigger.jpg" alt="">
+        <img :src="cardsItemHeadIconSrc" alt="">
+        <!--<img src="https://pbs.twimg.com/profile_images/814218236904488960/XnQ8GQa__bigger.jpg" alt="">-->
       </div>
       <div class="cardsItemDetail">
         <div class="cardsItemTopInfo">
@@ -43,12 +43,30 @@
       return {
         commentInputText: '',
         commentExpend: false,
-        commentHeight: 30,
-        cardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores, blanditiis doloribus eaque officia provident quasi quisquam rerum similique voluptatum.',
-        cardsItemID: '我是用户名'
+        commentHeight: 30
       }
     },
     props: {
+      cardsItemIndex: {
+        default: 0,
+        type: Number
+      },
+      cardsItemHeadIconSrc: {
+        default: 'https://avatars0.githubusercontent.com/u/25025692?v=3&s=460',
+        type: String
+      },
+      cardsItemID: {
+        default: '我是用户名',
+        type: String
+      },
+      cardsItemTimeUTC: {
+        default: 0,
+        type: Number
+      },
+      cardsItemText: {
+        default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, temporibus!',
+        type: String
+      },
       countLike: {
         default: 120,
         type: Number
@@ -58,6 +76,7 @@
     },
     computed: {
       cardsItemTime: function () {
+        console.log('cardsItemTimeUTC:' + this.cardsItemTimeUTC)
         return '1小时前'
       }
     },
@@ -145,7 +164,6 @@
   .cardsItemID{
     font-weight: bold;
   }
-  .cardsItemTime:hover,
   .cardsItemID:hover{
     cursor: pointer;
     color: #0084B4;

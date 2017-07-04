@@ -8,7 +8,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 // http request 拦截器
 axios.interceptors.request.use(
   config => {
-    console.log('request')
+    // console.log('request:' + JSON.stringify(config))
     return config
   },
   err => {
@@ -19,7 +19,7 @@ axios.interceptors.request.use(
 // http response 拦截器
 axios.interceptors.response.use(
   response => {
-    console.log('response:')
+    // console.log('response:' + JSON.stringify(response.data))
     return response
   },
   err => {

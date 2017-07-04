@@ -33,10 +33,10 @@
             text: '个人数据',
             active: true
           },
-          {
-            text: '朋友PK',
-            active: false
-          },
+//          {
+//            text: '朋友PK',
+//            active: false
+//          },
           {
             text: '广场闲逛',
             active: false

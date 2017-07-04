@@ -14,7 +14,7 @@
       </div>
       <div class="dialogContextCardsItemIconDetail">
         <div class="cardsItemHeadIcon">
-          <img src="../../assets/timg.png" alt="">
+          <img :src="commentReplyCardsItemHeadIconSrc" alt="">
           <!--<img src="https://pbs.twimg.com/profile_images/814218236904488960/XnQ8GQa__bigger.jpg" alt="">-->
         </div>
         <div class="cardsItemDetail">
@@ -39,15 +39,21 @@
       return {
         commentReplyExpend: false,
         commentReplyHeight: 35,
-        commentReplyInputText: '',
-        commentReplyCardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores, blanditiis rerum similique voluptatum.',
-        commentReplyCardsItemID: '我是用户名'
+        commentReplyInputText: ''
       }
     },
     props: {
-      countLike: {
-        default: 120,
-        type: Number
+      commentReplyCardsItemHeadIconSrc: {
+        default: '',
+        type: String
+      },
+      commentReplyCardsItemID: {
+        default: 'N/A',
+        type: String
+      },
+      commentReplyCardsItemText: {
+        default: 'N/A',
+        type: String
       }
     },
     components: {

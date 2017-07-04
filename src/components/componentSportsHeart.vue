@@ -41,11 +41,9 @@
 
 <script>
   import echarts from 'echarts/lib/echarts'
+  import 'echarts/lib/chart/line'
   import 'echarts/lib/component/tooltip'
   import 'echarts/lib/component/title'
-  import 'echarts/lib/chart/line'
-
-  import { mapGetters, mapActions } from 'vuex'
 
   export default {
     name: 'pageSportsWeight',
@@ -55,6 +53,7 @@
       return {
         lastHeart: 0,
         chart: null,
+        dataHeart: [],
         option: {
           legend: {
             show: false
@@ -62,9 +61,8 @@
           tooltip: {
             trigger: 'axis',
             formatter: function (params) {
-              params = params[0]
-              var date = new Date(params.name)
-              return date.getDate() + '日' + date.getHours() + ':' + date.getMinutes() + ' : ' + params.value[1]
+              let date = new Date(params[0].data.value[0])
+              return date.getDate() + '日' + date.getHours() + ':' + date.getMinutes() + ' : ' + params[0].value[1]
             },
             axisPointer: {
               type: 'shadow',
@@ -128,13 +126,9 @@
       },
       weekCalorieTarget: function () {
         return this.target * 7
-      },
-      ...mapGetters({
-      })
+      }
     },
     methods: {
-      ...mapActions([
-      ]),
       drawPie (id) {
         this.chart = echarts.init(document.getElementById(id))
         this.chart.setOption(this.option)
@@ -148,9 +142,7 @@
           data.push((function () {
             now = new Date(+now + oneDay)
             value = Math.random() * (130 - 40) + 40
-//            console.log(now.toString())
             return {
-              name: now.toString(),
               value: [
                 [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/') + ' ' + now.getHours() + ':' + now.getMinutes(),
                 Math.round(value)
@@ -161,16 +153,30 @@
 //        console.log('data:' + JSON.stringify(data))
         this.lastHeart = data[data.length - 1].value[1]
         return data
+      },
+      axiosGetSportsHeart () {
+        this.axios.get('/sportsheart').then(response => {
+          response.data.sportsheart = this.makeTestData()
+          this.dataHeart = response.data.sportsheart
+          console.log('/sportsheart response:' + JSON.stringify(response.data))
+        }).catch((err) => {
+          console.log('axiosGetSportsHeart err:' + err)
+        })
       }
     },
     watch: {
-      // 如果发生改变，这个函数就会运行
+      dataHeart: function () {
+        this.lastHeart = this.dataHeart[this.dataHeart.length - 1].value[1]
+        this.option.series[0].data = this.dataHeart
+        this.drawPie('sports-heart-echarts-canvas')
+      }
     },
     mounted () {
       this.$nextTick(function () {
 //        console.log('makeTestData:' + JSON.stringify(this.makeTestData()))
-        this.option.series[0].data = this.makeTestData()
-        this.drawPie('sports-heart-echarts-canvas')
+//        this.option.series[0].data = this.makeTestData()
+//        this.drawPie('sports-heart-echarts-canvas')
+        this.axiosGetSportsHeart()
       })
     }
   }
