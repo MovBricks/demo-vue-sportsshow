@@ -290,7 +290,7 @@
         }
       },
       axiosGetNowCalorie () {
-        this.axios.get('/nowcalorie').then(response => {
+        this.axios.get('http://rockbot.top/api/v1.0/health/get/calories').then(response => {
           console.log('/nowcalorie response:' + JSON.stringify(response.data))
           this.changeCalorieNow(response.data)
         }).catch((err) => {
@@ -298,9 +298,9 @@
         })
       },
       axiosSetTargetCalorie () {
-        this.axios.post('/settargetcalorie', {
-          targetCalorie: this.temporaryTarget
-        }).then(response => {
+        this.axios.post('http://rockbot.top/api/v1.0/health/set/calories', JSON.stringify({
+          'targetCalorie': this.temporaryTarget
+        })).then(response => {
           console.log('/settargetcalorie response:' + JSON.stringify(response.data))
         }).catch((err) => {
           console.log('axiosSetTargetCalorie err:' + err)
@@ -320,6 +320,7 @@
       this.$nextTick(function () {
         this.axiosGetNowCalorie()
         this.temporaryTarget = this.target
+        this.axiosSetTargetCalorie()
         this.drawPie('echarts-canvas')
       })
     }

@@ -1,6 +1,7 @@
-<<<<<<< HEAD
+
 # demo-vue-sportsshow
-a demo
+
+[demo](https://movbricks.github.io/demo-vue-sportsshow/dist/#/pageMain)
 =======
 # sportsshow
 
