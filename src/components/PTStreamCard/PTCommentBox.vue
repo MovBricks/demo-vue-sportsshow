@@ -1,12 +1,20 @@
 <template>
   <div class="commentBox">
     <div class="headIcon">
-      <img src="../../assets/timg.png" alt="Icon">
+      <!--<img src="../../assets/timg.png" alt="Icon">-->
+      <img :src="userHeadIconSrc" alt="Icon">
     </div>
     <div class="commentTips">
       <div class="commentTipsImgContainer">
         <div class="commentTipsWrapper" v-bind:style="{height: this.commentHeight + 'px'}">
-          <textarea v-model="commentInputText" placeholder="有什么新鲜事?" class="commentTips" v-on:focus="changeCommentExpend(false)" v-on:blur="changeCommentExpend(true)"></textarea>
+          <textarea
+            autocomplete="off"
+            spellcheck="false"
+            v-model="commentInputText"
+            placeholder="有什么新鲜事?"
+            class="commentTips"
+            v-on:focus="changeCommentExpend(false)"
+            v-on:blur="changeCommentExpend(true)"></textarea>
           <transition name="fade">
             <!--<div class="imgInputWrapper" v-show="!commentExpend" v-on:click="imgInputlick">-->
             <!--&lt;!&ndash;<input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v" multiple="multiple" class="fileInput">&ndash;&gt;-->
@@ -17,9 +25,11 @@
         <!--<transition name="fade2">-->
         <div class="imgInputSpace" v-bind:style="{height: this.imgInputSpaceHeight, opacity: commentImgInputExpend? 1:0, overflow: commentImgInputExpend? 'auto':'hidden'}">
           <el-upload
-            action="https://jsonplaceholder.typicode.com/posts/"
+            action=""
             list-type="picture-card"
+            :auto-upload = "false"
             :multiple="true"
+            :on-change="handlePictureCardChange"
             :on-preview="handlePictureCardPreview">
             <i class="el-icon-plus"></i>
           </el-upload>
@@ -44,12 +54,12 @@
 
 
 <script>
-  import quiButton from '../quiButton.vue'
-  import quiArrow from '../quiArrow.vue'
+  import { mapGetters } from 'vuex'
   export default {
     name: 'PTCommentBox',
     data: function () {
       return {
+        PictureList: [],
         dialogImageUrl: '',
         dialogVisible: false,
         commentInputText: '',
@@ -59,22 +69,42 @@
         commentHeight: 35
       }
     },
+    computed: {
+      ...mapGetters({
+        userHeadIconSrc: 'getUserHeadIconSrc',
+        userFullName: 'getUserFullName'
+      })
+    },
     props: {
-      msg: {
-        default: '下载'
-      },
-      tipsText: {
-        default: '默认的文案'
-      },
-      currentView: {
-        default: 'qui-btn'
-      }
     },
     components: {
-      'qui-btn': quiButton,
-      'qui-arrow': quiArrow
     },
     methods: {
+      handleUploadData: function () {
+        let retObj = {
+          cardsItemHeadIconSrc: this.userHeadIconSrc,
+          cardsItemID: this.userFullName,
+          cardsItemTimeUTC: 0,
+          cardsItemText: this.commentInputText,
+          countLike: 0,
+          cardsItemSlot: [
+          ]
+        }
+
+        retObj.cardsItemSlot = this.PictureList.map(
+          (Picture) => {
+            return {
+              type: 'img',
+              data: Picture.url
+            }
+          }
+        )
+        return retObj
+      },
+      handlePictureCardChange: function (file, fileList) {
+        console.log('fileList' + JSON.stringify(fileList))
+        this.PictureList = fileList
+      },
       handlePictureCardPreview: function (file) {
 //        console.log('file' + JSON.stringify(file))
         this.dialogImageUrl = file.url
@@ -88,6 +118,7 @@
         if (this.commentInputText === '') {
           return
         }
+        this.$emit('sendCommentClick', this.handleUploadData())
         this.axiosSendComment()
       },
       changeCommentExpend: function (isblur) {

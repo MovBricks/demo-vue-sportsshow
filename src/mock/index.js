@@ -36,7 +36,7 @@ var mockstart = function () {
       '@natural(60, 120)'
     ]
   })
-  Mock.mock('https://jsonplaceholder.typicode.com/posts/', {
+  Mock.mock('/sendcomment', {
     'weightmonth|5-12': [
       '@natural(60, 120)'
     ]

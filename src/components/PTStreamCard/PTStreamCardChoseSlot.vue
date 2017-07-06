@@ -1,6 +1,13 @@
 <template>
   <div>
-    <component v-bind:is="slotComName()" :slotObjData="slotObj.data"></component>
+    <!--<component-->
+      <!--v-for="(item, index) in slotTypeAndDataArray"-->
+      <!--:is="slotTypeAndDataArray.type"-->
+      <!--:key="index"-->
+      <!--:slotObjData="slotTypeAndDataArray.data"></component>-->
+    <slot-img v-if="slotDataImgArray.length > 0"
+      :slotObjData="slotDataImgArray"
+    ></slot-img>
   </div>
 </template>
 
@@ -13,7 +20,8 @@
       return {
         slotComNameArray: {
           img: 'slot-img'
-        }
+        },
+        slotDataImgArray: []
       }
     },
     props: {
@@ -25,11 +33,23 @@
       'slot-img': slotImg
     },
     methods: {
-      slotComName: function () {
-        if (this.slotObj.type !== '') {
-          return this.slotComNameArray[this.slotObj.type]
-        }
+      getSlotDataImgArray: function () {
+        this.slotDataImgArray = this.slotObj.filter((Obj) => {
+          return Obj.type === 'img'
+        })
       }
+    },
+    watch: {
+      slotObj: function () {
+//        console.log('slotObj change:' + JSON.stringify(this.slotObj))
+        this.getSlotDataImgArray()
+      }
+    },
+    mounted () {
+      this.$nextTick(function () {
+//        console.log('mounted:' + JSON.stringify(this.slotObj))
+        this.getSlotDataImgArray()
+      })
     }
   }
 

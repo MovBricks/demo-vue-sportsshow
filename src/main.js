@@ -11,6 +11,8 @@ import Button from 'element-ui/lib/button'
 import Upload from 'element-ui/lib/upload'
 import Dialog from 'element-ui/lib/dialog'
 import Progress from 'element-ui/lib/progress'
+import Carousel from 'element-ui/lib/carousel'
+import CarouselItem from 'element-ui/lib/carousel-item'
 import 'element-ui/lib/theme-default/index.css'
 
 import './mock'
@@ -19,7 +21,11 @@ Vue.use(Button)
 Vue.use(Upload)
 Vue.use(Dialog)
 Vue.use(Progress)
+Vue.use(Carousel)
+Vue.use(CarouselItem)
 // Vue.use(Input)
+
+// Vue.use(ElementUI)
 
 // Vue.config.productionTip = false
 

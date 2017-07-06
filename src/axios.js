@@ -2,14 +2,14 @@ import axios from 'axios'
 
 // axios 配置
 axios.defaults.timeout = 5000
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+axios.defaults.headers.post['Content-Type'] = 'application/json'
 // axios.defaults.withCredentials = true
 // axios.defaults.baseURL = 'https://api.github.com'
 
 // http request 拦截器
 axios.interceptors.request.use(
   config => {
-    console.log('request:' + JSON.stringify(config))
+    // console.log('request:' + JSON.stringify(config))
     return config
   },
   err => {
@@ -20,7 +20,7 @@ axios.interceptors.request.use(
 // http response 拦截器
 axios.interceptors.response.use(
   response => {
-    console.log('response:' + JSON.stringify(response.data))
+    // console.log('response:' + JSON.stringify(response.data))
     return response
   },
   err => {

@@ -1,6 +1,6 @@
 <template>
   <div id="pagePiazzaTall">
-    <comment-box></comment-box>
+    <comment-box v-on:sendCommentClick="handleCommentUpload"></comment-box>
       <stream-card
         v-for="(item,index) in streamCardList"
         v-on:buttonCommentClick="showDialogComment(index)"
@@ -56,6 +56,10 @@
       }
     },
     methods: {
+      handleCommentUpload: function (obj) {
+        this.streamCardList.unshift(obj)
+//        console.log(this.streamCardList)
+      },
       hideDialogComment: function () {
         this.dialogCommentShow = false
       },
@@ -78,10 +82,12 @@
             cardsItemTimeUTC: 0,
             cardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, temporibus!',
             countLike: 120,
-            cardsItemSlot: {
-              type: 'img',
-              data: 'https://cn.vuejs.org/images/logo.png'
-            }
+            cardsItemSlot: [
+              {
+                type: 'img',
+                data: 'https://cn.vuejs.org/images/logo.png'
+              }
+            ]
           },
           {
             cardsItemHeadIconSrc: 'https://avatars2.githubusercontent.com/u/15327928?v=3&s=460',
@@ -89,10 +95,12 @@
             cardsItemTimeUTC: 0,
             cardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             countLike: 22,
-            cardsItemSlot: {
-              type: 'img',
-              data: 'http://www.easyicon.net/api/resizeApi.php?id=1202635&size=128'
-            }
+            cardsItemSlot: [
+              {
+                type: 'img',
+                data: 'http://www.easyicon.net/api/resizeApi.php?id=1202635&size=128'
+              }
+            ]
           }
         ]
       },

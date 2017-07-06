@@ -10,7 +10,9 @@
           <span class="cardsItemID">{{cardsItemID}}</span><span class="cardsItemTime">{{cardsItemTime}}</span>
         </div>
         <p class="cardsItemText">{{cardsItemText}}</p>
-        <slot></slot>
+        <div class="cardsItemSlotWrapper">
+          <slot></slot>
+        </div>
         <ul class="cardsItemBottomTool">
           <li>
             <button class="cardsItemBottomToolButton maskIconComment" v-on:click="buttonCommentClick()">
@@ -76,7 +78,7 @@
     },
     computed: {
       cardsItemTime: function () {
-        console.log('cardsItemTimeUTC:' + this.cardsItemTimeUTC)
+//        console.log('cardsItemTimeUTC:' + this.cardsItemTimeUTC)
         return '1小时前'
       }
     },
@@ -157,6 +159,7 @@
   }
   .cardsItemDetail{
     /*width: 530px;*/
+    flex-grow:1
   }
   .cardsItemTopInfo{
     padding: 5px 0;
@@ -178,6 +181,9 @@
   .cardsItemText{
     color: #14171a;
     font-size: 0.9rem;
+  }
+  .cardsItemSlotWrapper{
+    margin: 10px 0;
   }
   .cardsItemBottomTool{
     display: flex;

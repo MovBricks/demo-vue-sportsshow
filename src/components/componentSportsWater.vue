@@ -45,7 +45,7 @@
       ]),
       axiosGetNeedWater () {
         this.axios.get('/needwater').then(response => {
-          console.log('/needwater response:' + JSON.stringify(response.data))
+//          console.log('/needwater response:' + JSON.stringify(response.data))
           this.needWater = response.data.needWater > this.targetWater ? this.targetWater : response.data.needWater
         }).catch((err) => {
           console.log('axiosGetNeedWater err:' + err)

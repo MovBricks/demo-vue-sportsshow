@@ -150,7 +150,7 @@
       axiosGetWeightMonth () {
         this.axios.get('/weightmonth').then(response => {
           this.weightMonth = response.data.weightmonth
-          console.log('/weightmonth response:' + JSON.stringify(response.data))
+//          console.log('/weightmonth response:' + JSON.stringify(response.data))
         }).catch((err) => {
           console.log('axiosGetWeightMonth err:' + err)
         })
