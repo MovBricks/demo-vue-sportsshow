@@ -10,10 +10,53 @@
     </ul>
     <ul class="headerUsr">
       <li>
-        <i class="el-icon-setting"></i>
+        <!--<el-popover-->
+          <!--ref="undeveloped"-->
+          <!--placement="top-start"-->
+          <!--title="说明"-->
+          <!--width="200"-->
+          <!--trigger="hover"-->
+          <!--content="该功能未开发">-->
+        <!--</el-popover>-->
+        <!--<i v-popover:undeveloped class="el-icon-setting"></i>-->
       </li>
       <li>
-        <i class="el-icon-message"></i>
+        <el-popover
+          ref="popoverMessage"
+          placement="bottom-start"
+          width="400"
+          trigger="click">
+          <el-table
+            :data="getUsrMsgData"
+            height="250"
+            style="width: 100%">
+            <el-table-column type="expand" :show-overflow-tooltip="true">
+              <template scope="props">
+                <el-form label-position="left" inline class="demo-table-expand">
+                  <el-form-item label="发信时间">
+                    <span>{{ props.row.date }}</span>
+                  </el-form-item>
+                  <el-form-item label="发信人">
+                    <span>{{ props.row.from }}</span>
+                  </el-form-item>
+                  <el-form-item label="内容">
+                    <span>{{ props.row.text }}</span>
+                  </el-form-item>
+                </el-form>
+              </template>
+            </el-table-column>
+            <el-table-column
+              label="发信人"
+              prop="from">
+            </el-table-column>
+            <el-table-column
+              :formatter="ELTableColumTextForMatter"
+              label="内容"
+              prop="text">
+            </el-table-column>
+          </el-table>
+        </el-popover>
+        <i v-popover:popoverMessage class="el-icon-message"></i>
       </li>
       <div class="headerUserIcon">
         <slot name="comp-head-title-nav-icon" ></slot>
@@ -23,7 +66,7 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex'
 
   export default {
     data: function () {
@@ -44,7 +87,19 @@
         ]
       }
     },
+    computed: {
+      ...mapGetters({
+        UsrMsgData: 'getUserMsgData'
+      }),
+      getUsrMsgData: function () {
+        let ret = this.UsrMsgData
+        return ret
+      }
+    },
     methods: {
+      ELTableColumTextForMatter: function (row) {
+        return row.text.slice(0, 10).concat('...')
+      },
       navClickEvent: function (items, index) {
         /* 默认切换类的动作 */
         items.forEach(function (el) {
@@ -148,6 +203,19 @@
   .headerUserIcon img{
     width: 100%;
     height: 100%;
+  }
+
+  .demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
   }
 </style>
 

@@ -1,9 +1,11 @@
 <template>
   <!--<div id="pageSideBar" v-bind:class="classSideBarWidth">-->
   <div id="pageSideBar">
-    <div class="pageSideBarIcon" v-on:click="changeShowSideBar ()">
-        <img v-bind:class="{plusIcon:!getShowSideBar}" src="../assets/xclose.png" alt="">
-    </div>
+    <el-tooltip content="点击后，可 增加/删除/移动 数据模块" placement="top">
+      <div class="pageSideBarIcon" v-on:click="changeShowSideBar ()">
+        <img  v-bind:class="{plusIcon:!getShowSideBar}" src="../assets/xclose.png" alt="">
+      </div>
+    </el-tooltip>
     <div class="pageSideBarContextContainer">
       <transition name="sideBar">
         <div class="pageSideBarContext" v-show="getShowSideBar">

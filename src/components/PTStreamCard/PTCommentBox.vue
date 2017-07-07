@@ -55,6 +55,8 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import Notification from 'element-ui/lib/notification'
+
   export default {
     name: 'PTCommentBox',
     data: function () {
@@ -115,6 +117,12 @@
         this.imgInputSpaceHeight = this.commentImgInputExpend ? '160px' : 0
       },
       sendCommentClick: function () {
+        Notification({
+//          title: '成功',
+          duration: 2000,
+          message: '消息发表成功！',
+          type: 'success'
+        })
         if (this.commentInputText === '') {
           return
         }

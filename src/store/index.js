@@ -9,6 +9,7 @@ import storeCalenderSportsSteps from './modules/storeCalenderSportsSteps'
 import storeDraggableComponent from './modules/storeDraggableComponent'
 import storeHeadTitle from './modules/storeHeadTitle'
 import storeUserInfo from './modules/storeUserInfo'
+import storeUserMessage from './modules/storeUserMessage'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -21,7 +22,8 @@ export default new Vuex.Store({
     storeCalenderSportsSteps,
     storeDraggableComponent,
     storeHeadTitle,
-    storeUserInfo
+    storeUserInfo,
+    storeUserMessage
   },
   strict: process.env.NODE_ENV !== 'production'
 })

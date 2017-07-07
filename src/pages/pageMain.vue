@@ -14,7 +14,6 @@
 </template>
 
 <script>
-  import quiBtn from '../components/quiButton.vue'
   import pagePiazzaTalk from '../pages/pagePiazzaTalk.vue'
 
   import comPageDraggable from './pageDraggable.vue'
@@ -25,7 +24,6 @@
   export default {
     name: 'pageSports',
     components: {
-      'qui-btn': quiBtn,
       'page-piazza-talk': pagePiazzaTalk,
       'com-page-topheader': comPageTopHeader,
       'com-page-sidebar': comPageSideBar,
