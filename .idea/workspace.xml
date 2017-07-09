@@ -15,60 +15,54 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="componentHeadTitle.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#el-form#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="componentSideBar.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/componentSideBar.vue">
+      <file leaf-file-name="pagePiazzaTalk.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/pagePiazzaTalk.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+            <state relative-caret-position="374">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageLogin.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/pageLogin.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3564">
+              <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PTStreamCard.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTStreamCard.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
-                <element signature="e#314#356#0" expanded="true" />
-                <element signature="e#923#970#0" expanded="true" />
+                <element signature="n#ul#0;n#div#1;n#div#0;n#li#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#2709#3117#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PTCommentBox.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTCommentBox.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="121" column="24" lean-forward="false" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
-              <folding>
-                <element signature="e#2206#2239#0" expanded="true" />
-                <element signature="n#style#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storeUserMessage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/modules/storeUserMessage.js">
+      <file leaf-file-name="pageQuiButton.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/pageQuiButton.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,11 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sideBarShowWidth</find>
-      <find>100%</find>
-      <find>drawEcharts</find>
-      <find>sports-detail-echarts-canvas</find>
-      <find>width</find>
       <find>275px</find>
       <find>makeTestData</find>
       <find>290px</find>
@@ -116,6 +105,11 @@
       <find>flex-shrink</find>
       <find>withCredentials</find>
       <find>popoverWrapper</find>
+      <find>streamCardList</find>
+      <find>list-complete</find>
+      <find>square</find>
+      <find>form</find>
+      <find>containerForm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,16 +118,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/echarts-liquidfill/node_modules/echarts/lib/visual/dataColor.js" />
-        <option value="$PROJECT_DIR$/node_modules/echarts-liquidfill/src/liquidFill.js" />
         <option value="$PROJECT_DIR$/src/pages/pagePiazzaTall.vue" />
-        <option value="$PROJECT_DIR$/src/pages/index.vue" />
         <option value="$PROJECT_DIR$/src/assets/picture.svg" />
         <option value="$PROJECT_DIR$/build/webpack.prod.conf.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/src/components/componentSportsDetail.vue" />
         <option value="$PROJECT_DIR$/src/pages/pageEchartsTest.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
@@ -161,10 +151,7 @@
         <option value="$PROJECT_DIR$/src/components/componentSportsWeight.vue" />
         <option value="$PROJECT_DIR$/src/axios.js" />
         <option value="$PROJECT_DIR$/src/components/quiButton.vue" />
-        <option value="$PROJECT_DIR$/src/components/componentSportsPie.vue" />
-        <option value="$PROJECT_DIR$/src/mock/index.js" />
         <option value="$PROJECT_DIR$/src/store/modules/storeUserInfo.js" />
-        <option value="$PROJECT_DIR$/src/pages/pagePiazzaTalk.vue" />
         <option value="$PROJECT_DIR$/src/components/PTStreamCard/PTStreamCardChoseSlot.vue" />
         <option value="$PROJECT_DIR$/src/components/PTStreamCard/slotComponents/slotImg.vue" />
         <option value="$PROJECT_DIR$/src/components/PTStreamCard/PTStreamCard.vue" />
@@ -175,6 +162,13 @@
         <option value="$PROJECT_DIR$/src/components/componentSideBar.vue" />
         <option value="$PROJECT_DIR$/src/components/PTStreamCard/PTCommentBox.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/mock/index.js" />
+        <option value="$PROJECT_DIR$/src/components/componentSportsPie.vue" />
+        <option value="$PROJECT_DIR$/src/pages/index.vue" />
+        <option value="$PROJECT_DIR$/src/pages/css/loginStyles.css" />
+        <option value="$PROJECT_DIR$/src/pages/pageLogin.vue" />
+        <option value="$PROJECT_DIR$/src/pages/pagePiazzaTalk.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
       </list>
     </option>
   </component>
@@ -239,6 +233,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,29 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sportsshow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sportsshow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="router" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,6 +294,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sportsshow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sportsshow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,8 +379,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,19 +398,19 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/element-ui/src/index.js&#10;D:/WebstormProjects/sportsshow/node_modules/element-ui/packages/upload/index.js&#10;D:/WebstormProjects/sportsshow/node_modules/element-ui/lib/element-ui.common.js&#10;D:/WebstormProjects/sportsshow/node_modules/echarts-liquidfill/src/liquidFill.js&#10;D:/WebstormProjects/sportsshow/node_modules/element-ui/packages/progress/index.js&#10;D:/WebstormProjects/sportsshow/node_modules/echarts-liquidfill/node_modules/echarts/index.js" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\sportsshow\src\pages\css" />
+      <recent name="D:\WebstormProjects\sportsshow\src\pages" />
+      <recent name="D:\WebstormProjects\sportsshow\src\store\modules" />
+      <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard" />
+      <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard\slotComponents" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard" />
       <recent name="D:\WebstormProjects\sportsshow\src\components" />
       <recent name="D:\WebstormProjects\sportsshow\src\axios\http" />
       <recent name="D:\WebstormProjects\sportsshow\src\axios" />
       <recent name="D:\WebstormProjects\sportsshow\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WebstormProjects\sportsshow\src\store\modules" />
-      <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard" />
-      <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard\slotComponents" />
-      <recent name="D:\WebstormProjects\sportsshow\src\components\PTStreamCard\children" />
-      <recent name="D:\WebstormProjects\sportsshow\src\assets\cardsItem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -578,12 +572,14 @@
       <workItem from="1499135600534" duration="35547000" />
       <workItem from="1499261868297" duration="7972000" />
       <workItem from="1499328431632" duration="12948000" />
-      <workItem from="1499433222210" duration="7363000" />
+      <workItem from="1499433222210" duration="7768000" />
+      <workItem from="1499522043341" duration="3762000" />
+      <workItem from="1499568445513" duration="5577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562556000" />
+    <option name="totallyTimeSpent" value="572300000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -641,63 +637,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/echarts/lib/chart/line.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/storeHeadTitle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/quiArrow.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/quiNav.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pageQuiButton.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pageQuiList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pageQuiNav.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pageEchartsTest.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/pageHeadTitle.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -862,19 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mock/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/quiButton.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-396">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,16 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentSportsPie.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="325" column="5" lean-forward="true" selection-start-line="318" selection-start-column="4" selection-end-line="325" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -941,18 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pagePiazzaTalk.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#3078#3559#0" expanded="false" />
-            <element signature="e#3571#4058#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,9 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="45" column="9" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="45" selection-end-column="9" />
-          <folding>
-            <element signature="e#356#412#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,20 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTStreamCard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="185" column="18" lean-forward="false" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
-          <folding>
-            <element signature="n#ul#0;n#div#1;n#div#0;n#li#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#2709#3117#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,17 +894,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTCommentBox.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="2640">
+          <caret line="121" column="24" lean-forward="false" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#el-form#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#2206#2239#0" expanded="false" />
+            <element signature="n#style#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding>
+            <element signature="e#314#356#0" expanded="false" />
+            <element signature="e#923#970#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1030,25 +927,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTCommentBox.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/componentHeadTitle.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="121" column="24" lean-forward="false" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <element signature="e#2206#2239#0" expanded="true" />
-            <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-form#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-popover#0;n#li#1;n#ul#1;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
+    <entry file="file://G:/1493V5V0-2094/lo_gin/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/1493V5V0-2094/lo_gin/lo_gin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="48" column="6" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
           <folding>
-            <element signature="e#314#356#0" expanded="true" />
-            <element signature="e#923#970#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/componentSportsPie.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="293" column="35" lean-forward="false" selection-start-line="293" selection-start-column="35" selection-end-line="293" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/pageQuiNav.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mock/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/css/loginStyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="60" column="47" lean-forward="false" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/pageLogin.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3564">
+          <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PTStreamCard/PTStreamCard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding>
+            <element signature="n#ul#0;n#div#1;n#div#0;n#li#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#2709#3117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/pageQuiButton.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/pagePiazzaTalk.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

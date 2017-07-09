@@ -1,6 +1,7 @@
 <template>
   <div id="pagePiazzaTall">
     <comment-box v-on:sendCommentClick="handleCommentUpload"></comment-box>
+    <!--<transition-group name="list-complete"  class="list-complete-item" tag="ul">-->
       <stream-card
         v-for="(item,index) in streamCardList"
         v-on:buttonCommentClick="showDialogComment(index)"
@@ -15,6 +16,7 @@
       >
         <stream-card-chose-slot :slotObj="item.cardsItemSlot" ></stream-card-chose-slot>
       </stream-card>
+    <!--</transition-group>-->
       <stream-card-dialog-comment
         v-if="dialogCommentShow"
         v-on:overlayClick="hideDialogComment()"
@@ -57,7 +59,8 @@
     },
     methods: {
       handleCommentUpload: function (obj) {
-        this.streamCardList.unshift(obj)
+//        this.streamCardList.unshift(obj)
+        this.streamCardList.splice(0, 0, obj)
 //        console.log(this.streamCardList)
       },
       hideDialogComment: function () {
@@ -83,10 +86,10 @@
             cardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, temporibus!',
             countLike: 120,
             cardsItemSlot: [
-              {
-                type: 'img',
-                data: 'https://cn.vuejs.org/images/logo.png'
-              }
+//              {
+//                type: 'img',
+//                data: 'https://cn.vuejs.org/images/logo.png'
+//              }
             ]
           },
           {
@@ -96,10 +99,10 @@
             cardsItemText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             countLike: 22,
             cardsItemSlot: [
-              {
-                type: 'img',
-                data: 'http://www.easyicon.net/api/resizeApi.php?id=1202635&size=128'
-              }
+//              {
+//                type: 'img',
+//                data: 'http://www.easyicon.net/api/resizeApi.php?id=1202635&size=128'
+//              }
             ]
           }
         ]
@@ -120,9 +123,28 @@
 </script>
 
 <style scoped>
+  ul{
+    margin: 0;
+    padding: 0;
+  }
   #pagePiazzaTall{
     width: 590px;
     /*padding-left: 100px;*/
     /*padding-top: 50px;*/
+  }
+
+  .list-complete-item>* {
+    transition: all 10s;
+  }
+  .list-complete-move {
+    transition: transform 1s;
+    transform: translateY(-100px);
+  }
+  .list-complete-enter, .list-complete-leave-to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .list-complete-leave-active {
+    position: absolute;
   }
 </style>

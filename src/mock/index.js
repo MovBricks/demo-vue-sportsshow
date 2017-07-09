@@ -41,8 +41,8 @@ var mockstart = function () {
       '@natural(60, 120)'
     ]
   })
-  // Mock.mock('/settargetcalorie', {
-  // })
+  Mock.mock('/settargetcalorie', {
+  })
 }
 
 mockstart()

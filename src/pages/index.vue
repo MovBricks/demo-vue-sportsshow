@@ -66,7 +66,11 @@
           <a class="page-link" href="#/pagePiazzaTalk">广场闲逛</a>
         </p>
       </div>
-
+      <div class="img-box">
+        <p class="img-item">
+          <a class="page-link" href="#/pageLogin">登陆界面</a>
+        </p>
+      </div>
     </div>
   </div>
 </template>

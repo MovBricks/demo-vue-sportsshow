@@ -15,6 +15,7 @@ import pageMain from '../pages/pageMain.vue'
 import NotFoundComponent from '../components/Hello.vue'
 import sportsWater from '../components/componentSportsWater.vue'
 import pagePiazzaTalk from '../pages/pagePiazzaTalk.vue'
+import pageLogin from '../pages/pageLogin.vue'
 
 Vue.use(Router)
 
@@ -85,6 +86,11 @@ const devRoutesArray = [
     component: pageMain
   },
   {
+    path: '/pageLogin',
+    name: 'pageLogin',
+    component: pageLogin
+  },
+  {
     path: '*',
     component: NotFoundComponent
   }
@@ -100,6 +106,11 @@ const buildRoutesArray = [
     path: '/pageMain',
     name: 'pageMain',
     component: pageMain
+  },
+  {
+    path: '/pageLogin',
+    name: 'pageLogin',
+    component: pageLogin
   },
   {
     path: '*',
