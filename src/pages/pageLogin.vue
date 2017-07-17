@@ -7,7 +7,7 @@
           <form class="containerForm">
             <input type="text" placeholder="用户名">
             <input type="password" placeholder="密码">
-            <button type="submit" id="login-button" v-on:click="loginClick">登陆</button>
+            <button type="" id="login-button" v-on:click="loginClick">登陆</button>
           </form>
         </div>
         <ul class="bg-bubbles">
@@ -35,16 +35,12 @@
     methods: {
       loginClick: function () {
         this.$router.push('pageMain')
-      },
-      doSth2: function () {
-        alert('6666')
       }
     }
   }
 </script>
 
 <style scoped>
-  /*@import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300);*/
   * {
     box-sizing: border-box;
     margin: 0;

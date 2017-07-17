@@ -194,7 +194,7 @@
 
   .headerUserIcon{
     padding: 0 5px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     width:40px;
     height:40px;
     border-radius:50%;
